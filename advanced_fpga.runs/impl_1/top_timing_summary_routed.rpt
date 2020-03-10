@@ -1,0 +1,1406 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Mar 10 14:22:28 2020
+| Host         : JacobOffersen running 64-bit Ubuntu 19.10
+| Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7s25-ftgb196
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 7 register/latch pins with no clock driven by root clock pin: tx_active (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: clock_generator0/binary_counter0/q_reg[8]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/FSM_sequential_state_reg[0]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/FSM_sequential_state_reg[1]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/bit_index_reg[0]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/bit_index_reg[1]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/bit_index_reg[2]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/substate_reg[0]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/substate_reg[1]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/substate_reg[2]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: uart_module0/uart_rx0/substate_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: uart_module0/uart_tx0/FSM_sequential_state_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: uart_module0/uart_tx0/FSM_sequential_state_reg[1]/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 58 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 16 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      1.948        0.000                      0                    9        0.308        0.000                      0                    9        1.619        0.000                       0                    14  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock      Waveform(ns)         Period(ns)      Frequency(MHz)
+-----      ------------         ----------      --------------
+clk_in_hw  {0.000 5.000}        10.000          100.000         
+  CLKFBIN  {0.000 40.000}       80.000          12.500          
+  clk      {0.000 2.119}        4.238           235.938         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_in_hw                                                                                                                                                       3.000        0.000                       0                     1  
+  CLKFBIN                                                                                                                                                      20.000        0.000                       0                     2  
+  clk               1.948        0.000                      0                    9        0.308        0.000                      0                    9        1.619        0.000                       0                    11  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_in_hw
+  To Clock:  clk_in_hw
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_in_hw
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_in_hw }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  CLKFBIN
+  To Clock:  CLKFBIN
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       20.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         CLKFBIN
+Waveform(ns):       { 0.000 40.000 }
+Period(ns):         80.000
+Sources:            { clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         80.000      78.751     MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         80.000      78.751     MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       80.000      20.000     MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       80.000      133.360    MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBOUT
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.948ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.308ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        1.619ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.948ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        2.177ns  (logic 1.358ns (62.366%)  route 0.819ns (37.634%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.769ns = ( 10.007 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 r  clock_generator0/binary_counter0/q_reg[2]/Q
+                         net (fo=1, routed)           0.819     7.580    clock_generator0/binary_counter0/q_reg_n_0_[2]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.504     8.084 r  clock_generator0/binary_counter0/q_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    clock_generator0/binary_counter0/q_reg[0]_i_1_n_0
+    SLICE_X40Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.201 r  clock_generator0/binary_counter0/q_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.201    clock_generator0/binary_counter0/q_reg[4]_i_1_n_0
+    SLICE_X40Y27         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     8.420 r  clock_generator0/binary_counter0/q_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     8.420    clock_generator0/binary_counter0/q_reg[8]_i_1_n_7
+    SLICE_X40Y27         FDRE                                         r  clock_generator0/binary_counter0/q_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.502    10.007    clock_generator0/binary_counter0/clk
+    SLICE_X40Y27         FDRE                                         r  clock_generator0/binary_counter0/q_reg[8]/C
+                         clock pessimism              0.454    10.462    
+                         clock uncertainty           -0.203    10.258    
+    SLICE_X40Y27         FDRE (Setup_fdre_C_D)        0.109    10.367    clock_generator0/binary_counter0/q_reg[8]
+  -------------------------------------------------------------------
+                         required time                         10.367    
+                         arrival time                          -8.420    
+  -------------------------------------------------------------------
+                         slack                                  1.948    
+
+Slack (MET) :             1.960ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        2.164ns  (logic 1.345ns (62.140%)  route 0.819ns (37.860%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        -0.020ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.768ns = ( 10.006 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 r  clock_generator0/binary_counter0/q_reg[2]/Q
+                         net (fo=1, routed)           0.819     7.580    clock_generator0/binary_counter0/q_reg_n_0_[2]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.504     8.084 r  clock_generator0/binary_counter0/q_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    clock_generator0/binary_counter0/q_reg[0]_i_1_n_0
+    SLICE_X40Y26         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.407 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[1]
+                         net (fo=1, routed)           0.000     8.407    clock_generator0/binary_counter0/q_reg[4]_i_1_n_6
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.501    10.006    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[5]/C
+                         clock pessimism              0.454    10.461    
+                         clock uncertainty           -0.203    10.257    
+    SLICE_X40Y26         FDRE (Setup_fdre_C_D)        0.109    10.366    clock_generator0/binary_counter0/q_reg[5]
+  -------------------------------------------------------------------
+                         required time                         10.366    
+                         arrival time                          -8.407    
+  -------------------------------------------------------------------
+                         slack                                  1.960    
+
+Slack (MET) :             1.968ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        2.156ns  (logic 1.337ns (62.000%)  route 0.819ns (38.000%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        -0.020ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.768ns = ( 10.006 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 r  clock_generator0/binary_counter0/q_reg[2]/Q
+                         net (fo=1, routed)           0.819     7.580    clock_generator0/binary_counter0/q_reg_n_0_[2]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.504     8.084 r  clock_generator0/binary_counter0/q_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    clock_generator0/binary_counter0/q_reg[0]_i_1_n_0
+    SLICE_X40Y26         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     8.399 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     8.399    clock_generator0/binary_counter0/q_reg[4]_i_1_n_4
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.501    10.006    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[7]/C
+                         clock pessimism              0.454    10.461    
+                         clock uncertainty           -0.203    10.257    
+    SLICE_X40Y26         FDRE (Setup_fdre_C_D)        0.109    10.366    clock_generator0/binary_counter0/q_reg[7]
+  -------------------------------------------------------------------
+                         required time                         10.366    
+                         arrival time                          -8.399    
+  -------------------------------------------------------------------
+                         slack                                  1.968    
+
+Slack (MET) :             2.044ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        2.080ns  (logic 1.261ns (60.612%)  route 0.819ns (39.388%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        -0.020ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.768ns = ( 10.006 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 r  clock_generator0/binary_counter0/q_reg[2]/Q
+                         net (fo=1, routed)           0.819     7.580    clock_generator0/binary_counter0/q_reg_n_0_[2]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.504     8.084 r  clock_generator0/binary_counter0/q_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    clock_generator0/binary_counter0/q_reg[0]_i_1_n_0
+    SLICE_X40Y26         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.323 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[2]
+                         net (fo=1, routed)           0.000     8.323    clock_generator0/binary_counter0/q_reg[4]_i_1_n_5
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.501    10.006    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[6]/C
+                         clock pessimism              0.454    10.461    
+                         clock uncertainty           -0.203    10.257    
+    SLICE_X40Y26         FDRE (Setup_fdre_C_D)        0.109    10.366    clock_generator0/binary_counter0/q_reg[6]
+  -------------------------------------------------------------------
+                         required time                         10.366    
+                         arrival time                          -8.323    
+  -------------------------------------------------------------------
+                         slack                                  2.044    
+
+Slack (MET) :             2.064ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        2.060ns  (logic 1.241ns (60.229%)  route 0.819ns (39.771%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        -0.020ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.768ns = ( 10.006 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.454ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 r  clock_generator0/binary_counter0/q_reg[2]/Q
+                         net (fo=1, routed)           0.819     7.580    clock_generator0/binary_counter0/q_reg_n_0_[2]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.504     8.084 r  clock_generator0/binary_counter0/q_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    clock_generator0/binary_counter0/q_reg[0]_i_1_n_0
+    SLICE_X40Y26         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     8.303 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     8.303    clock_generator0/binary_counter0/q_reg[4]_i_1_n_7
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.501    10.006    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[4]/C
+                         clock pessimism              0.454    10.461    
+                         clock uncertainty           -0.203    10.257    
+    SLICE_X40Y26         FDRE (Setup_fdre_C_D)        0.109    10.366    clock_generator0/binary_counter0/q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         10.366    
+                         arrival time                          -8.303    
+  -------------------------------------------------------------------
+                         slack                                  2.064    
+
+Slack (MET) :             2.230ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        1.914ns  (logic 1.285ns (67.129%)  route 0.629ns (32.871%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.766ns = ( 10.004 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.476ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 r  clock_generator0/binary_counter0/q_reg[1]/Q
+                         net (fo=1, routed)           0.629     7.389    clock_generator0/binary_counter0/q_reg_n_0_[1]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.767     8.156 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[3]
+                         net (fo=1, routed)           0.000     8.156    clock_generator0/binary_counter0/q_reg[0]_i_1_n_4
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.499    10.004    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[3]/C
+                         clock pessimism              0.476    10.481    
+                         clock uncertainty           -0.203    10.277    
+    SLICE_X40Y25         FDRE (Setup_fdre_C_D)        0.109    10.386    clock_generator0/binary_counter0/q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         10.386    
+                         arrival time                          -8.156    
+  -------------------------------------------------------------------
+                         slack                                  2.230    
+
+Slack (MET) :             2.295ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        1.849ns  (logic 1.220ns (65.974%)  route 0.629ns (34.026%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.766ns = ( 10.004 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.476ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 r  clock_generator0/binary_counter0/q_reg[1]/Q
+                         net (fo=1, routed)           0.629     7.389    clock_generator0/binary_counter0/q_reg_n_0_[1]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.702     8.091 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[2]
+                         net (fo=1, routed)           0.000     8.091    clock_generator0/binary_counter0/q_reg[0]_i_1_n_5
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.499    10.004    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/C
+                         clock pessimism              0.476    10.481    
+                         clock uncertainty           -0.203    10.277    
+    SLICE_X40Y25         FDRE (Setup_fdre_C_D)        0.109    10.386    clock_generator0/binary_counter0/q_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.386    
+                         arrival time                          -8.091    
+  -------------------------------------------------------------------
+                         slack                                  2.295    
+
+Slack (MET) :             2.554ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        1.590ns  (logic 1.069ns (67.228%)  route 0.521ns (32.772%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.766ns = ( 10.004 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.476ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 f  clock_generator0/binary_counter0/q_reg[0]/Q
+                         net (fo=1, routed)           0.521     7.281    clock_generator0/binary_counter0/q_reg_n_0_[0]
+    SLICE_X40Y25         LUT1 (Prop_lut1_I0_O)        0.124     7.405 r  clock_generator0/binary_counter0/q[0]_i_2/O
+                         net (fo=1, routed)           0.000     7.405    clock_generator0/binary_counter0/q[0]_i_2_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.427     7.832 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[1]
+                         net (fo=1, routed)           0.000     7.832    clock_generator0/binary_counter0/q_reg[0]_i_1_n_6
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.499    10.004    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[1]/C
+                         clock pessimism              0.476    10.481    
+                         clock uncertainty           -0.203    10.277    
+    SLICE_X40Y25         FDRE (Setup_fdre_C_D)        0.109    10.386    clock_generator0/binary_counter0/q_reg[1]
+  -------------------------------------------------------------------
+                         required time                         10.386    
+                         arrival time                          -7.832    
+  -------------------------------------------------------------------
+                         slack                                  2.554    
+
+Slack (MET) :             2.729ns  (required time - arrival time)
+  Source:                 clock_generator0/binary_counter0/q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.238ns  (clk rise@4.238ns - clk rise@0.000ns)
+  Data Path Delay:        1.415ns  (logic 0.894ns (63.176%)  route 0.521ns (36.824%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.766ns = ( 10.004 - 4.238 ) 
+    Source Clock Delay      (SCD):    6.242ns
+    Clock Pessimism Removal (CPR):    0.476ns
+  Clock Uncertainty:      0.203ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.400ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.348     2.787    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.875 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     4.532    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.628 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.614     6.242    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.518     6.760 f  clock_generator0/binary_counter0/q_reg[0]/Q
+                         net (fo=1, routed)           0.521     7.281    clock_generator0/binary_counter0/q_reg_n_0_[0]
+    SLICE_X40Y25         LUT1 (Prop_lut1_I0_O)        0.124     7.405 r  clock_generator0/binary_counter0/q[0]_i_2/O
+                         net (fo=1, routed)           0.000     7.405    clock_generator0/binary_counter0/q[0]_i_2_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.252     7.657 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[0]
+                         net (fo=1, routed)           0.000     7.657    clock_generator0/binary_counter0/q_reg[0]_i_1_n_7
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.238     4.238 r  
+    L5                                                0.000     4.238 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     4.238    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369     5.607 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.145     6.753    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     6.836 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578     8.414    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.505 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           1.499    10.004    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/C
+                         clock pessimism              0.476    10.481    
+                         clock uncertainty           -0.203    10.277    
+    SLICE_X40Y25         FDRE (Setup_fdre_C_D)        0.109    10.386    clock_generator0/binary_counter0/q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.386    
+                         arrival time                          -7.657    
+  -------------------------------------------------------------------
+                         slack                                  2.729    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.308ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.442ns  (logic 0.279ns (63.107%)  route 0.163ns (36.893%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.463ns
+    Source Clock Delay      (SCD):    1.859ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.580     1.859    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.164     2.023 f  clock_generator0/binary_counter0/q_reg[0]/Q
+                         net (fo=1, routed)           0.163     2.186    clock_generator0/binary_counter0/q_reg_n_0_[0]
+    SLICE_X40Y25         LUT1 (Prop_lut1_I0_O)        0.045     2.231 r  clock_generator0/binary_counter0/q[0]_i_2/O
+                         net (fo=1, routed)           0.000     2.231    clock_generator0/binary_counter0/q[0]_i_2_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     2.301 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.301    clock_generator0/binary_counter0/q_reg[0]_i_1_n_7
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.848     2.463    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/C
+                         clock pessimism             -0.604     1.859    
+    SLICE_X40Y25         FDRE (Hold_fdre_C_D)         0.134     1.993    clock_generator0/binary_counter0/q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.993    
+                         arrival time                           2.301    
+  -------------------------------------------------------------------
+                         slack                                  0.308    
+
+Slack (MET) :             0.312ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.446ns  (logic 0.273ns (61.259%)  route 0.173ns (38.741%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.463ns
+    Source Clock Delay      (SCD):    1.859ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.580     1.859    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.164     2.023 r  clock_generator0/binary_counter0/q_reg[3]/Q
+                         net (fo=1, routed)           0.173     2.196    clock_generator0/binary_counter0/q_reg_n_0_[3]
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.109     2.305 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.305    clock_generator0/binary_counter0/q_reg[0]_i_1_n_4
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.848     2.463    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[3]/C
+                         clock pessimism             -0.604     1.859    
+    SLICE_X40Y25         FDRE (Hold_fdre_C_D)         0.134     1.993    clock_generator0/binary_counter0/q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.993    
+                         arrival time                           2.305    
+  -------------------------------------------------------------------
+                         slack                                  0.312    
+
+Slack (MET) :             0.315ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.449ns  (logic 0.279ns (62.071%)  route 0.170ns (37.929%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.860ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.581     1.860    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y26         FDRE (Prop_fdre_C_Q)         0.164     2.024 r  clock_generator0/binary_counter0/q_reg[4]/Q
+                         net (fo=1, routed)           0.170     2.195    clock_generator0/binary_counter0/q_reg_n_0_[4]
+    SLICE_X40Y26         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.310 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.310    clock_generator0/binary_counter0/q_reg[4]_i_1_n_7
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.849     2.464    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[4]/C
+                         clock pessimism             -0.604     1.860    
+    SLICE_X40Y26         FDRE (Hold_fdre_C_D)         0.134     1.994    clock_generator0/binary_counter0/q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.994    
+                         arrival time                           2.310    
+  -------------------------------------------------------------------
+                         slack                                  0.315    
+
+Slack (MET) :             0.338ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.472ns  (logic 0.273ns (57.848%)  route 0.199ns (42.152%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.860ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.581     1.860    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y26         FDRE (Prop_fdre_C_Q)         0.164     2.024 r  clock_generator0/binary_counter0/q_reg[7]/Q
+                         net (fo=1, routed)           0.199     2.223    clock_generator0/binary_counter0/q_reg_n_0_[7]
+    SLICE_X40Y26         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.109     2.332 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.332    clock_generator0/binary_counter0/q_reg[4]_i_1_n_4
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.849     2.464    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[7]/C
+                         clock pessimism             -0.604     1.860    
+    SLICE_X40Y26         FDRE (Hold_fdre_C_D)         0.134     1.994    clock_generator0/binary_counter0/q_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.994    
+                         arrival time                           2.332    
+  -------------------------------------------------------------------
+                         slack                                  0.338    
+
+Slack (MET) :             0.343ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.477ns  (logic 0.314ns (65.814%)  route 0.163ns (34.186%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.463ns
+    Source Clock Delay      (SCD):    1.859ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.580     1.859    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.164     2.023 f  clock_generator0/binary_counter0/q_reg[0]/Q
+                         net (fo=1, routed)           0.163     2.186    clock_generator0/binary_counter0/q_reg_n_0_[0]
+    SLICE_X40Y25         LUT1 (Prop_lut1_I0_O)        0.045     2.231 r  clock_generator0/binary_counter0/q[0]_i_2/O
+                         net (fo=1, routed)           0.000     2.231    clock_generator0/binary_counter0/q[0]_i_2_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.105     2.336 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.336    clock_generator0/binary_counter0/q_reg[0]_i_1_n_6
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.848     2.463    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[1]/C
+                         clock pessimism             -0.604     1.859    
+    SLICE_X40Y25         FDRE (Hold_fdre_C_D)         0.134     1.993    clock_generator0/binary_counter0/q_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.993    
+                         arrival time                           2.336    
+  -------------------------------------------------------------------
+                         slack                                  0.343    
+
+Slack (MET) :             0.350ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.484ns  (logic 0.314ns (64.811%)  route 0.170ns (35.189%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.860ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.581     1.860    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y26         FDRE (Prop_fdre_C_Q)         0.164     2.024 r  clock_generator0/binary_counter0/q_reg[4]/Q
+                         net (fo=1, routed)           0.170     2.195    clock_generator0/binary_counter0/q_reg_n_0_[4]
+    SLICE_X40Y26         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.150     2.345 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.345    clock_generator0/binary_counter0/q_reg[4]_i_1_n_6
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.849     2.464    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[5]/C
+                         clock pessimism             -0.604     1.860    
+    SLICE_X40Y26         FDRE (Hold_fdre_C_D)         0.134     1.994    clock_generator0/binary_counter0/q_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.994    
+                         arrival time                           2.345    
+  -------------------------------------------------------------------
+                         slack                                  0.350    
+
+Slack (MET) :             0.383ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.517ns  (logic 0.354ns (68.458%)  route 0.163ns (31.542%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.463ns
+    Source Clock Delay      (SCD):    1.859ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.580     1.859    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.164     2.023 f  clock_generator0/binary_counter0/q_reg[0]/Q
+                         net (fo=1, routed)           0.163     2.186    clock_generator0/binary_counter0/q_reg_n_0_[0]
+    SLICE_X40Y25         LUT1 (Prop_lut1_I0_O)        0.045     2.231 r  clock_generator0/binary_counter0/q[0]_i_2/O
+                         net (fo=1, routed)           0.000     2.231    clock_generator0/binary_counter0/q[0]_i_2_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.145     2.376 r  clock_generator0/binary_counter0/q_reg[0]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.376    clock_generator0/binary_counter0/q_reg[0]_i_1_n_5
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.848     2.463    clock_generator0/binary_counter0/clk
+    SLICE_X40Y25         FDRE                                         r  clock_generator0/binary_counter0/q_reg[2]/C
+                         clock pessimism             -0.604     1.859    
+    SLICE_X40Y25         FDRE (Hold_fdre_C_D)         0.134     1.993    clock_generator0/binary_counter0/q_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.993    
+                         arrival time                           2.376    
+  -------------------------------------------------------------------
+                         slack                                  0.383    
+
+Slack (MET) :             0.390ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.524ns  (logic 0.354ns (67.495%)  route 0.170ns (32.505%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.860ns
+    Clock Pessimism Removal (CPR):    0.604ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.581     1.860    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y26         FDRE (Prop_fdre_C_Q)         0.164     2.024 r  clock_generator0/binary_counter0/q_reg[4]/Q
+                         net (fo=1, routed)           0.170     2.195    clock_generator0/binary_counter0/q_reg_n_0_[4]
+    SLICE_X40Y26         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.190     2.385 r  clock_generator0/binary_counter0/q_reg[4]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.385    clock_generator0/binary_counter0/q_reg[4]_i_1_n_5
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.849     2.464    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[6]/C
+                         clock pessimism             -0.604     1.860    
+    SLICE_X40Y26         FDRE (Hold_fdre_C_D)         0.134     1.994    clock_generator0/binary_counter0/q_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.994    
+                         arrival time                           2.385    
+  -------------------------------------------------------------------
+                         slack                                  0.390    
+
+Slack (MET) :             0.421ns  (arrival time - required time)
+  Source:                 clock_generator0/binary_counter0/q_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Destination:            clock_generator0/binary_counter0/q_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.119ns period=4.238ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.570ns  (logic 0.371ns (65.096%)  route 0.199ns (34.904%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.466ns
+    Source Clock Delay      (SCD):    1.860ns
+    Clock Pessimism Removal (CPR):    0.591ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.511     0.719    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.769 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     1.253    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.279 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.581     1.860    clock_generator0/binary_counter0/clk
+    SLICE_X40Y26         FDRE                                         r  clock_generator0/binary_counter0/q_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y26         FDRE (Prop_fdre_C_Q)         0.164     2.024 r  clock_generator0/binary_counter0/q_reg[7]/Q
+                         net (fo=1, routed)           0.199     2.223    clock_generator0/binary_counter0/q_reg_n_0_[7]
+    SLICE_X40Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.154     2.377 r  clock_generator0/binary_counter0/q_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.377    clock_generator0/binary_counter0/q_reg[4]_i_1_n_0
+    SLICE_X40Y27         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     2.430 r  clock_generator0/binary_counter0/q_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.430    clock_generator0/binary_counter0/q_reg[8]_i_1_n_7
+    SLICE_X40Y27         FDRE                                         r  clock_generator0/binary_counter0/q_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           0.611     1.006    clock_generator0/clock_module_TE02770/clk_in_hw_IBUF
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     1.059 r  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     1.587    clock_generator0/clock_module_TE02770/clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.616 r  clock_generator0/clock_module_TE02770/clk_BUFG_inst/O
+                         net (fo=9, routed)           0.851     2.466    clock_generator0/binary_counter0/clk
+    SLICE_X40Y27         FDRE                                         r  clock_generator0/binary_counter0/q_reg[8]/C
+                         clock pessimism             -0.591     1.875    
+    SLICE_X40Y27         FDRE (Hold_fdre_C_D)         0.134     2.009    clock_generator0/binary_counter0/q_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -2.009    
+                         arrival time                           2.430    
+  -------------------------------------------------------------------
+                         slack                                  0.421    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 2.119 }
+Period(ns):         4.238
+Sources:            { clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            2.155         4.238       2.083      BUFGCTRL_X0Y0    clock_generator0/clock_module_TE02770/clk_BUFG_inst/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         4.238       2.989      MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[3]/C
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[4]/C
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[5]/C
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[6]/C
+Min Period        n/a     FDRE/C              n/a            1.000         4.238       3.238      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[7]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       4.238       209.122    MMCME2_ADV_X1Y0  clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[3]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[4]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[5]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[6]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[7]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y27     clock_generator0/binary_counter0/q_reg[8]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y27     clock_generator0/binary_counter0/q_reg[8]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[1]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[2]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[3]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[4]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[5]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[6]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y26     clock_generator0/binary_counter0/q_reg[7]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         2.119       1.619      SLICE_X40Y25     clock_generator0/binary_counter0/q_reg[1]/C
+
+
+
