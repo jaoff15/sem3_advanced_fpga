@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /home/jacoboffersen/Program/vivado20182/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 1791de64923548bd8a9f22819c420a9e --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb -log elaborate.log 
+Running: /home/jacoboffersen/Program/vivado20182/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto c08e0bfea532472787824da243d15e7b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -26,6 +26,7 @@ Compiling architecture mmcme2_base_v of entity unisim.MMCME2_BASE [\MMCME2_BASE(
 Compiling architecture rtl of entity xil_defaultlib.clock_module_TE0277 [\clock_module_TE0277(m=56.625,d=...]
 Compiling architecture behavioral of entity xil_defaultlib.binary_counter [\binary_counter(n=12)\]
 Compiling architecture behavioral of entity xil_defaultlib.clock_generator [clock_generator_default]
+Compiling architecture behavioral of entity xil_defaultlib.bus_master [bus_master_default]
 Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
 Compiling architecture testbench of entity xil_defaultlib.top_tb
 Built simulation snapshot top_tb_behav

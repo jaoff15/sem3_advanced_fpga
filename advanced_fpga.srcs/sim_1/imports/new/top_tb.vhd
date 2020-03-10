@@ -48,7 +48,7 @@ architecture Testbench of top_tb is
            --tx_start : in  std_logic;
            tx_out_hw   : out std_logic := '0';
            rx_in_hw    : in  std_logic := '0';
-           tx_active   : in  std_logic := '0';
+       --    tx_active   : in  std_logic := '0';
            rx_data_hw  : out std_logic_vector(7 downto 0) := (others => '0'));
     end component;
 begin
@@ -60,9 +60,9 @@ clk      <= not clk after 5ns;
 
 stim_proc: process
 begin
-    tx_start <= '0';
-    wait for 2000 ns;
-    tx_start <= '1';
+--    tx_start <= '0';
+--    wait for 2000 ns;
+--    tx_start <= '1';
 --    wait for 5000 ns;
 --    tx_start <= '0';
     wait;
@@ -77,7 +77,7 @@ end process;
 U1:top 
 port map(
     CLK_IN_hw   => clk,
-    tx_active => tx_start,
+--    tx_active => tx_start,
     tx_out_hw   => tx_out,
     rx_in_hw    => rx_in,
     rx_data_hw  => rx_data
