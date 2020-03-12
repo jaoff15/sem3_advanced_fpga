@@ -8,6 +8,7 @@ use ieee.numeric_std.all;
 
 entity top is
     Port ( clk_in_hw        : in  STD_LOGIC := '0';
+           clk_out          : out std_logic := '0';
            tx_out_hw        : out std_logic := '0';
            rx_in_hw         : in  std_logic := '0';
     --       tx_active            : in  std_logic := '0';
@@ -31,7 +32,7 @@ architecture Behavioral of top is
 
 
     signal rx_data_out      : std_logic_vector(7 downto 0) := (others => '0');
-    signal bus_master_clk   : std_logic := '0';
+    --signal bus_master_clk   : std_logic := '0';
     
     signal address_signal   : std_logic_vector(7  downto 0) := (others => '0');
     signal data_signal      : std_logic_vector(31 downto 0) := (others => '0');
@@ -72,7 +73,7 @@ port map(
     reset_in    => '0',
     rx_in       => rx_in_hw,
     tx_out      => tx_out_hw,
-    clk_out     => bus_master_clk,
+    clk_out     => clk_out,
     data        => data_signal,
     address     => address_signal,
     rx_data_out => rx_data_out
