@@ -70,15 +70,14 @@ generic (
            rx_in        : in    STD_LOGIC := '0';
            tx_out       : out   STD_LOGIC := '0';
            clk_out      : out   STD_LOGIC := '0';
-           data         : inout STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
-           address      : out   STD_LOGIC_VECTOR (7 downto 0)  := (others => '0');
-           rx_data_out  : out   std_logic_vector(7 downto 0)   := (others => '0')
+           data_bus_in  : in    STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           data_bus_out : out   STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           address_bus  : out   STD_LOGIC_VECTOR(7  downto 0) := (others => '0');
+           rx_data_out  : out   std_logic_vector(7  downto 0) := (others => '0')
            );
 end bus_master;
 
 architecture Behavioral of bus_master is
-    
-    
 
     signal clk_signal       : std_logic := '0';
 
@@ -291,16 +290,17 @@ begin
             when S5_R =>
                 -- 'CR'
                 if rx_data_out_signal = ASCII_CR then
-                    next_state      <= S_Read;
-                    --tx_data         <= "10101010";
-                    --tx_start_signal <= '1';
+                    next_state  <= S_Read;
+                    address_bus <= address_signal;
                 else 
-                    next_state <= S_WAIT;
+                    next_state  <= S_WAIT;
                 end if;
                 
             -- Read
             when S_Read =>
-                next_state <= S_WAIT;
+                tx_data         <= data_bus_in(7 downto 0);
+                tx_start_signal <= '1';
+                next_state      <= S_WAIT;
                 
             -- ************** WRITE **************
             when S2_W =>
@@ -418,7 +418,9 @@ begin
                 end if;
                 
             when S_Write =>
-                next_state <= S_WAIT;
+                address_bus   <= address_signal;
+                data_bus_out  <= data_signal;
+                next_state    <= S_WAIT;
                 
              when others =>
                 next_state <= S_WAIT;
@@ -444,7 +446,7 @@ end process;
 --    end if;
 --end process;
 
---rx_data_out <= rx_data_out_signal;
+
 
 ---- Dec: 87 104 97 116 116 117 112  92 110  
 ---- Hex: 57  68 61  74  74  75  70  5C  6E
@@ -460,6 +462,8 @@ end process;
 --              "00001101" when 8,    -- carrage return
 --              "00000000" when others;
 
+
+rx_data_out <= rx_data_out_signal;
 
 
 uart_module0:uart_module 

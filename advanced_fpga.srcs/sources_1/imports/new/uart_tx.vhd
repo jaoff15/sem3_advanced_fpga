@@ -50,9 +50,10 @@ architecture Behavioral of uart_tx is
 
     
     --signal state            : integer range 0 to 20 := 9;
-    signal substate         : integer range 0 to 3 := 0;
+    signal substate         : integer range 0 to 32 := 0;
     
-    signal substate_count   : integer range 0 to 32 := 4;
+--    signal substate_count   : integer range 0 to 32 := 4;
+    signal substate_count   : integer range 0 to 32 := 32;
     
     signal tx_out_signal    : std_logic := '1';
     signal tx_out_signal_i    : std_logic := '1';

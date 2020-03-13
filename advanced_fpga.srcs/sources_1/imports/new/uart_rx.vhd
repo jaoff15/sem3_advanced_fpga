@@ -40,8 +40,9 @@ architecture Behavioral of uart_rx is
     --signal clk              : std_logic := '0';
     
     --signal state            : integer range 0 to 10 := 0;
-    signal substate         : integer range 0 to 10 := 0;
-    signal substate_count   : integer range 0 to 32 := 4;
+    signal substate         : integer range 0 to 32 := 0;
+--    signal substate_count   : integer range 0 to 32 := 4;
+    signal substate_count   : integer range 0 to 32 := 32;
 
     signal rx_in_signal     : std_logic := '0';
     signal rx_in_last       : std_logic := '0';
@@ -74,64 +75,60 @@ begin
   if rising_edge(clk_in) then
      if (RESET = '1') then
         state         <= S_WAIT;
-       -- tx_out_signal <= '1';
      else
         state         <= next_state;
-        --tx_out_signal <= tx_out_signal_i;
      end if;
-    
   end if;
 end process;
 
 --MOORE State-Machine - Outputs based on state only
-OUTPUT_DECODE: process (clk_in, state, substate)
+OUTPUT_DECODE: process (clk_in) --, state, substate)
 begin
-  if state = S_WAIT then 
-    running         <= '0';
-  elsif state = S_STOP then
-    running         <= '1';
---    tx_out_signal_i <= '1';
-  elsif state = S_BITS then
-    running         <= '1';
-    if substate = substate_count/2 then
-        data_temp(7-bit_index) <= rx_in_signal;
-    end if;
---    tx_out_signal_i <= tx_data_snapshot(bit_index);
-  elsif state = S_START then
-    running         <= '1';
---    tx_out_signal_i <= '0';
-  else
-    running         <= '0';
---    tx_out_signal_i <= '1';
+  if rising_edge(clk_in) then
+      if state = S_WAIT then 
+        running         <= '0';
+      elsif state = S_STOP then
+        running         <= '1';
+      elsif state = S_BITS then
+        running         <= '1';
+        if substate = substate_count/2-1 then
+            data_temp(7-bit_index) <= rx_in_signal;
+        end if;
+      elsif state = S_START then
+        running         <= '1';
+      else
+        running         <= '0';
+      end if;
   end if;
 end process;
 
 
 NEXT_STATE_DECODE: process (clk_in)
 begin
-  next_state <= state;  --default is to stay in current state
-  case (state) is
-     when S_WAIT =>
-        if rx_in_last = '1' and rx_in_signal = '0' then
---            tx_data_snapshot  <= TX_DATA;
-            next_state <= S_START;
-        end if;
-     when S_START =>
-        if substate = substate_count-1 then
-           next_state <= S_BITS;
-        end if;
-     when S_BITS =>
-        if bit_index = 7 and substate = substate_count-1 then
-            next_state  <= S_STOP;
-            rx_data_out <= data_temp;
-         end if;
-     when S_STOP =>
-        if substate = substate_count-1 then
-             next_state <= S_WAIT;
-          end if;
-     when others =>
-        next_state <= S_WAIT;
-  end case;
+    if rising_edge(clk_in) then
+--      next_state <= state;  --default is to stay in current state
+      case (state) is
+         when S_WAIT =>
+            if rx_in_last = '1' and rx_in_signal = '0' then
+                next_state <= S_START;
+            end if;
+         when S_START =>
+            if substate = substate_count-1 then
+               next_state <= S_BITS;
+            end if;
+         when S_BITS =>
+            if bit_index = 7 and substate = substate_count-1 then
+                next_state  <= S_STOP;
+                rx_data_out <= data_temp;
+             end if;
+         when S_STOP =>
+            if substate = substate_count-5 then
+                 next_state <= S_WAIT;
+              end if;
+         when others =>
+            next_state <= S_WAIT;
+      end case;
+  end if;
 end process;
 
 
@@ -140,7 +137,7 @@ begin
     if rising_edge(clk_in) then
         if state /= next_state or substate = substate_count -1 then
             substate <= 0;
-        else
+        else --if running = '1' then
             substate <= substate + 1;
         end if;
     end if;
@@ -150,7 +147,7 @@ end process;
 process (clk_in) 
 begin
     if rising_edge(clk_in) then
-        if substate = substate_count - 1 and state = S_BITS then
+        if substate = substate_count - 1 and state = S_BITS and bit_index < 7 then
             bit_index <= bit_index + 1;
         elsif state /= s_BITS then
             bit_index <= 0;

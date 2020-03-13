@@ -79,10 +79,19 @@ clock_module_TE02770:clock_module_TE0277
 --             O => 1.0,
 --             D => 17)
 -- 115200 Hz
+--generic map( CLK_IN_PERIOD => 10.0,
+--             M => 56.625,
+--             D => 8,
+--             O => 3.0)
 generic map( CLK_IN_PERIOD => 10.0,
-             M => 56.625,
-             D => 8,
-             O => 3.0)
+              M => 51.0,
+              D => 5,
+              O => 10.625)
+
+--generic map( CLK_IN_PERIOD => 10.0,
+--              M => 10.0,
+--              D => 1,
+--              O => 31.250)
 port map(
     XCLK_I  => CLK_IN,
     RESET_I => '0',
@@ -90,19 +99,22 @@ port map(
     CLK_1000_O => clk
 );
 
-binary_counter0: binary_counter 
---generic map( N        => 5)
---generic map( N        => 3)
-generic map( N        => 12)
-port map(    CLK_I    => clk,
-             RESET_I  => '0',
-             Q_O      => counter_out
-);
+--binary_counter0: binary_counter 
+----generic map( N        => 5)
+----generic map( N        => 3)
+--generic map( N        => 12)
+--port map(    CLK_I    => clk,
+--             RESET_I  => '0',
+--             Q_O      => counter_out
+--);
 
 --CLK_OUT <= counter_out(4);
 --CLK_OUT <= counter_out(2); -- 3MHz
 --CLK_OUT <= counter_out(10); -- 115200 Hz
-CLK_OUT <= counter_out(8); -- 115200 Hz
+--CLK_OUT <= counter_out(8); -- 115200 Hz
 --CLK_OUT <= counter_out(7); -- 115200 Hz
+
+CLK_OUT <= clk;
+
 
 end Behavioral;

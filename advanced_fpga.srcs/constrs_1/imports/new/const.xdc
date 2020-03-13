@@ -51,8 +51,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports rx_in_hw]
 set_property IOSTANDARD LVCMOS33 [get_ports tx_out_hw]
 
 
-set_property PACKAGE_PIN A2 [get_ports tx_active]
-set_property IOSTANDARD LVCMOS33 [get_ports tx_active]
 
 set_property PACKAGE_PIN H13 [get_ports {segment_out[7]}]
 set_property PACKAGE_PIN J13 [get_ports {segment_out[6]}]
@@ -70,3 +68,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports {segment_out[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {segment_out[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {segment_out[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {segment_out[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports clk_out]
+
+set_property PACKAGE_PIN N4 [get_ports clk_out]
+
+set_property DRIVE 12 [get_ports clk_out]
+set_property SLEW SLOW [get_ports clk_out]

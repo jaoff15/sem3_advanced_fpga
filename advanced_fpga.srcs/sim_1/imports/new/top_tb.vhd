@@ -166,14 +166,14 @@ with tx_index select
                 ASCII_a       when 3,
                 ASCII_B       when 4,
                 ASCII_COLON   when 5,
-                ASCII_8       when 6,
-                ASCII_9       when 7,
-                ASCII_a       when 8,
-                ASCII_B       when 9,
-                ASCII_c       when 10,
-                ASCII_d       when 11,
-                ASCII_e       when 12,
-                ASCII_f       when 13,
+                ASCII_0       when 6,
+                ASCII_0       when 7,
+                ASCII_0       when 8,
+                ASCII_0       when 9,
+                ASCII_0       when 10,
+                ASCII_0       when 11,
+                ASCII_0       when 12,
+                ASCII_5       when 13,
                 ascii_cr      when 14,    -- carrage return
                 "00000000"    when others;
 
@@ -197,7 +197,7 @@ port map(    CLK_IN     => bus_master_clk,
 U1:top 
 port map(
     CLK_IN_hw   => clk,
-    clk_out     => bus_master_clk,
+   clk_out     => bus_master_clk,
 --    tx_active => tx_start,
     tx_out_hw   => tx_out,
     rx_in_hw    => tx_out_tb,

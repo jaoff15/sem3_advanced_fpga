@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /home/jacoboffersen/Program/vivado20182/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto c08e0bfea532472787824da243d15e7b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb -log elaborate.log 
+Running: /home/jacoboffersen/Program/vivado20182/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto c08e0bfea532472787824da243d15e7b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -21,12 +21,12 @@ Compiling package unisim.vpkg
 Compiling architecture behavioral of entity xil_defaultlib.uart_tx [uart_tx_default]
 Compiling architecture behavioral of entity xil_defaultlib.uart_rx [uart_rx_default]
 Compiling architecture behavioral of entity xil_defaultlib.uart_module [uart_module_default]
-Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=56.6...]
-Compiling architecture mmcme2_base_v of entity unisim.MMCME2_BASE [\MMCME2_BASE(clkfbout_mult_f=56....]
-Compiling architecture rtl of entity xil_defaultlib.clock_module_TE0277 [\clock_module_TE0277(m=56.625,d=...]
-Compiling architecture behavioral of entity xil_defaultlib.binary_counter [\binary_counter(n=12)\]
+Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=51.0...]
+Compiling architecture mmcme2_base_v of entity unisim.MMCME2_BASE [\MMCME2_BASE(clkfbout_mult_f=51....]
+Compiling architecture rtl of entity xil_defaultlib.clock_module_TE0277 [\clock_module_TE0277(m=51.0,d=5,...]
 Compiling architecture behavioral of entity xil_defaultlib.clock_generator [clock_generator_default]
 Compiling architecture behavioral of entity xil_defaultlib.bus_master [bus_master_default]
+Compiling architecture behavioral of entity xil_defaultlib.segment_display [\segment_display(module_adr="101...]
 Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
 Compiling architecture testbench of entity xil_defaultlib.top_tb
 Built simulation snapshot top_tb_behav
