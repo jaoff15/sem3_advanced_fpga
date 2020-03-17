@@ -1,0 +1,1618 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Mar 17 08:15:40 2020
+| Host         : JacobOffersen running 64-bit Ubuntu 19.10
+| Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7s25-ftgb196
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 38 register/latch pins with no clock driven by root clock pin: bus_master0/uart_module0/uart_rx0/running_reg/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 86 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 17 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      6.387        0.000                      0                   78        0.165        0.000                      0                   78        3.000        0.000                       0                    70  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock           Waveform(ns)       Period(ns)      Frequency(MHz)
+-----           ------------       ----------      --------------
+clk_in_hw       {0.000 5.000}      10.000          100.000         
+  CLKFBIN       {0.000 25.000}     50.000          20.000          
+  clk_out_OBUF  {0.000 5.208}      10.417          96.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_in_hw                                                                                                                                                         3.000        0.000                       0                     7  
+  CLKFBIN                                                                                                                                                        48.751        0.000                       0                     2  
+  clk_out_OBUF        6.387        0.000                      0                   78        0.165        0.000                      0                   78        4.708        0.000                       0                    61  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_in_hw
+  To Clock:  clk_in_hw
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_in_hw
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_in_hw }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I             n/a            2.155         10.000      7.845      BUFGCTRL_X0Y2    clk_in_hw_IBUF_BUFG_inst/I
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X18Y17     bus_master0/state_reg[0]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X18Y17     bus_master0/state_reg[1]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X19Y14     bus_master0/state_reg[2]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X18Y17     bus_master0/state_reg[3]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X16Y18     bus_master0/state_reg[4]/C
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X19Y14     bus_master0/state_reg[2]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[0]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[1]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X19Y14     bus_master0/state_reg[2]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[3]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X16Y18     bus_master0/state_reg[4]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[0]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[1]/C
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[0]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[1]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[3]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X16Y18     bus_master0/state_reg[4]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[0]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X18Y17     bus_master0/state_reg[1]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X19Y14     bus_master0/state_reg[2]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X19Y14     bus_master0/state_reg[2]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  CLKFBIN
+  To Clock:  CLKFBIN
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       48.751ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         CLKFBIN
+Waveform(ns):       { 0.000 25.000 }
+Period(ns):         50.000
+Sources:            { bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       50.000      50.000     MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       50.000      163.360    MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKFBOUT
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out_OBUF
+  To Clock:  clk_out_OBUF
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.387ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.165ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.708ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.387ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.681ns  (logic 1.027ns (27.901%)  route 2.654ns (72.099%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.335ns = ( 18.752 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.499    11.286    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT6 (Prop_lut6_I5_O)        0.124    11.410 r  bus_master0/uart_module0/uart_rx0/data_temp[1]_i_2/O
+                         net (fo=3, routed)           0.663    12.073    bus_master0/uart_module0/uart_rx0/data_temp[1]_i_2_n_0
+    SLICE_X23Y17         LUT3 (Prop_lut3_I2_O)        0.124    12.197 r  bus_master0/uart_module0/uart_rx0/data_temp[2]_i_1/O
+                         net (fo=1, routed)           0.587    12.784    bus_master0/uart_module0/uart_rx0/data_temp[2]_i_1_n_0
+    SLICE_X23Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.436    18.752    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/C
+                         clock pessimism              0.747    19.499    
+                         clock uncertainty           -0.122    19.377    
+    SLICE_X23Y17         FDRE (Setup_fdre_C_CE)      -0.205    19.172    bus_master0/uart_module0/uart_rx0/data_temp_reg[2]
+  -------------------------------------------------------------------
+                         required time                         19.172    
+                         arrival time                         -12.784    
+  -------------------------------------------------------------------
+                         slack                                  6.387    
+
+Slack (MET) :             6.481ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.588ns  (logic 1.263ns (35.205%)  route 2.325ns (64.795%))
+  Logic Levels:           3  (LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.335ns = ( 18.752 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.647    11.434    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT5 (Prop_lut5_I0_O)        0.152    11.586 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_2/O
+                         net (fo=1, routed)           0.450    12.036    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_2_n_0
+    SLICE_X22Y17         LUT4 (Prop_lut4_I3_O)        0.332    12.368 r  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_1/O
+                         net (fo=1, routed)           0.323    12.691    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_1_n_0
+    SLICE_X20Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.436    18.752    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X20Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/C
+                         clock pessimism              0.747    19.499    
+                         clock uncertainty           -0.122    19.377    
+    SLICE_X20Y17         FDRE (Setup_fdre_C_CE)      -0.205    19.172    bus_master0/uart_module0/uart_rx0/data_temp_reg[0]
+  -------------------------------------------------------------------
+                         required time                         19.172    
+                         arrival time                         -12.691    
+  -------------------------------------------------------------------
+                         slack                                  6.481    
+
+Slack (MET) :             6.525ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[7]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.545ns  (logic 1.027ns (28.973%)  route 2.518ns (71.027%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.020ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.336ns = ( 18.753 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.504    11.291    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT6 (Prop_lut6_I5_O)        0.124    11.415 f  bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2/O
+                         net (fo=4, routed)           0.730    12.145    bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2_n_0
+    SLICE_X20Y16         LUT3 (Prop_lut3_I2_O)        0.124    12.269 r  bus_master0/uart_module0/uart_rx0/data_temp[7]_i_1/O
+                         net (fo=1, routed)           0.379    12.648    bus_master0/uart_module0/uart_rx0/data_temp[7]_i_1_n_0
+    SLICE_X20Y16         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.437    18.753    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X20Y16         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[7]/C
+                         clock pessimism              0.747    19.500    
+                         clock uncertainty           -0.122    19.378    
+    SLICE_X20Y16         FDRE (Setup_fdre_C_CE)      -0.205    19.173    bus_master0/uart_module0/uart_rx0/data_temp_reg[7]
+  -------------------------------------------------------------------
+                         required time                         19.173    
+                         arrival time                         -12.648    
+  -------------------------------------------------------------------
+                         slack                                  6.525    
+
+Slack (MET) :             6.569ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.502ns  (logic 1.027ns (29.330%)  route 2.475ns (70.670%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.337ns = ( 18.754 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.504    11.291    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT6 (Prop_lut6_I5_O)        0.124    11.415 f  bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2/O
+                         net (fo=4, routed)           0.734    12.150    bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2_n_0
+    SLICE_X20Y16         LUT3 (Prop_lut3_I2_O)        0.124    12.274 r  bus_master0/uart_module0/uart_rx0/data_temp[4]_i_1/O
+                         net (fo=1, routed)           0.331    12.605    bus_master0/uart_module0/uart_rx0/data_temp[4]_i_1_n_0
+    SLICE_X20Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.438    18.754    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X20Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/C
+                         clock pessimism              0.747    19.501    
+                         clock uncertainty           -0.122    19.379    
+    SLICE_X20Y15         FDRE (Setup_fdre_C_CE)      -0.205    19.174    bus_master0/uart_module0/uart_rx0/data_temp_reg[4]
+  -------------------------------------------------------------------
+                         required time                         19.174    
+                         arrival time                         -12.605    
+  -------------------------------------------------------------------
+                         slack                                  6.569    
+
+Slack (MET) :             6.593ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.515ns  (logic 1.027ns (29.220%)  route 2.488ns (70.780%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.018ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.338ns = ( 18.755 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.499    11.286    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT6 (Prop_lut6_I5_O)        0.124    11.410 r  bus_master0/uart_module0/uart_rx0/data_temp[1]_i_2/O
+                         net (fo=3, routed)           0.612    12.023    bus_master0/uart_module0/uart_rx0/data_temp[1]_i_2_n_0
+    SLICE_X22Y16         LUT3 (Prop_lut3_I0_O)        0.124    12.147 r  bus_master0/uart_module0/uart_rx0/data_temp[3]_i_1/O
+                         net (fo=1, routed)           0.472    12.618    bus_master0/uart_module0/uart_rx0/data_temp[3]_i_1_n_0
+    SLICE_X22Y14         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.439    18.755    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y14         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/C
+                         clock pessimism              0.747    19.502    
+                         clock uncertainty           -0.122    19.380    
+    SLICE_X22Y14         FDRE (Setup_fdre_C_CE)      -0.169    19.211    bus_master0/uart_module0/uart_rx0/data_temp_reg[3]
+  -------------------------------------------------------------------
+                         required time                         19.211    
+                         arrival time                         -12.618    
+  -------------------------------------------------------------------
+                         slack                                  6.593    
+
+Slack (MET) :             6.662ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.406ns  (logic 1.027ns (30.152%)  route 2.379ns (69.848%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.335ns = ( 18.752 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.504    11.291    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT6 (Prop_lut6_I5_O)        0.124    11.415 f  bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2/O
+                         net (fo=4, routed)           0.451    11.866    bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2_n_0
+    SLICE_X21Y17         LUT3 (Prop_lut3_I2_O)        0.124    11.990 r  bus_master0/uart_module0/uart_rx0/data_temp[5]_i_1/O
+                         net (fo=1, routed)           0.519    12.510    bus_master0/uart_module0/uart_rx0/data_temp[5]_i_1_n_0
+    SLICE_X21Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.436    18.752    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X21Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/C
+                         clock pessimism              0.747    19.499    
+                         clock uncertainty           -0.122    19.377    
+    SLICE_X21Y17         FDRE (Setup_fdre_C_CE)      -0.205    19.172    bus_master0/uart_module0/uart_rx0/data_temp_reg[5]
+  -------------------------------------------------------------------
+                         required time                         19.172    
+                         arrival time                         -12.510    
+  -------------------------------------------------------------------
+                         slack                                  6.662    
+
+Slack (MET) :             6.757ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[6]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.349ns  (logic 1.027ns (30.667%)  route 2.322ns (69.333%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.337ns = ( 18.754 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.504    11.291    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT6 (Prop_lut6_I5_O)        0.124    11.415 f  bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2/O
+                         net (fo=4, routed)           0.439    11.855    bus_master0/uart_module0/uart_rx0/data_temp[4]_i_2_n_0
+    SLICE_X22Y16         LUT3 (Prop_lut3_I2_O)        0.124    11.979 r  bus_master0/uart_module0/uart_rx0/data_temp[6]_i_1/O
+                         net (fo=1, routed)           0.474    12.452    bus_master0/uart_module0/uart_rx0/data_temp[6]_i_1_n_0
+    SLICE_X22Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.438    18.754    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[6]/C
+                         clock pessimism              0.747    19.501    
+                         clock uncertainty           -0.122    19.379    
+    SLICE_X22Y15         FDRE (Setup_fdre_C_CE)      -0.169    19.210    bus_master0/uart_module0/uart_rx0/data_temp_reg[6]
+  -------------------------------------------------------------------
+                         required time                         19.210    
+                         arrival time                         -12.452    
+  -------------------------------------------------------------------
+                         slack                                  6.757    
+
+Slack (MET) :             6.943ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/data_temp_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.126ns  (logic 1.027ns (32.848%)  route 2.099ns (67.152%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.020ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.336ns = ( 18.753 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.478     9.581 r  bus_master0/uart_module0/uart_rx0/substate_reg[3]/Q
+                         net (fo=6, routed)           0.905    10.486    bus_master0/uart_module0/uart_rx0/substate_reg__0[3]
+    SLICE_X23Y19         LUT4 (Prop_lut4_I3_O)        0.301    10.787 f  bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3/O
+                         net (fo=3, routed)           0.499    11.286    bus_master0/uart_module0/uart_rx0/data_temp[0]_i_3_n_0
+    SLICE_X23Y18         LUT6 (Prop_lut6_I5_O)        0.124    11.410 r  bus_master0/uart_module0/uart_rx0/data_temp[1]_i_2/O
+                         net (fo=3, routed)           0.317    11.728    bus_master0/uart_module0/uart_rx0/data_temp[1]_i_2_n_0
+    SLICE_X23Y16         LUT3 (Prop_lut3_I2_O)        0.124    11.852 r  bus_master0/uart_module0/uart_rx0/data_temp[1]_i_1/O
+                         net (fo=1, routed)           0.378    12.230    bus_master0/uart_module0/uart_rx0/data_temp[1]_i_1_n_0
+    SLICE_X23Y16         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.437    18.753    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y16         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[1]/C
+                         clock pessimism              0.747    19.500    
+                         clock uncertainty           -0.122    19.378    
+    SLICE_X23Y16         FDRE (Setup_fdre_C_CE)      -0.205    19.173    bus_master0/uart_module0/uart_rx0/data_temp_reg[1]
+  -------------------------------------------------------------------
+                         required time                         19.173    
+                         arrival time                         -12.230    
+  -------------------------------------------------------------------
+                         slack                                  6.943    
+
+Slack (MET) :             7.049ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/next_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        3.300ns  (logic 1.014ns (30.729%)  route 2.286ns (69.271%))
+  Logic Levels:           4  (LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.333ns = ( 18.750 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.518     9.621 r  bus_master0/uart_module0/uart_rx0/substate_reg[2]/Q
+                         net (fo=7, routed)           0.902    10.523    bus_master0/uart_module0/uart_rx0/substate_reg__0[2]
+    SLICE_X23Y19         LUT6 (Prop_lut6_I2_O)        0.124    10.647 r  bus_master0/uart_module0/uart_rx0/bit_index[2]_i_2/O
+                         net (fo=7, routed)           0.494    11.141    bus_master0/uart_module0/uart_rx0/bit_index[2]_i_2_n_0
+    SLICE_X23Y17         LUT6 (Prop_lut6_I4_O)        0.124    11.265 r  bus_master0/uart_module0/uart_rx0/rx_data_out[7]_i_1/O
+                         net (fo=17, routed)          0.427    11.693    bus_master0/uart_module0/uart_rx0/rx_data_out[7]_i_1_n_0
+    SLICE_X22Y18         LUT6 (Prop_lut6_I0_O)        0.124    11.817 r  bus_master0/uart_module0/uart_rx0/next_state[1]_i_3/O
+                         net (fo=2, routed)           0.463    12.279    bus_master0/uart_module0/uart_rx0/next_state[1]_i_3_n_0
+    SLICE_X22Y18         LUT4 (Prop_lut4_I2_O)        0.124    12.403 r  bus_master0/uart_module0/uart_rx0/next_state[0]_i_1__0/O
+                         net (fo=1, routed)           0.000    12.403    bus_master0/uart_module0/uart_rx0/next_state[0]_i_1__0_n_0
+    SLICE_X22Y18         FDRE                                         r  bus_master0/uart_module0/uart_rx0/next_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.434    18.750    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y18         FDRE                                         r  bus_master0/uart_module0/uart_rx0/next_state_reg[0]/C
+                         clock pessimism              0.747    19.497    
+                         clock uncertainty           -0.122    19.375    
+    SLICE_X22Y18         FDRE (Setup_fdre_C_D)        0.077    19.452    bus_master0/uart_module0/uart_rx0/next_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         19.452    
+                         arrival time                         -12.403    
+  -------------------------------------------------------------------
+                         slack                                  7.049    
+
+Slack (MET) :             7.107ns  (required time - arrival time)
+  Source:                 bus_master0/uart_module0/uart_rx0/substate_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]_lopt_replica/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.417ns  (clk_out_OBUF rise@10.417ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        2.964ns  (logic 0.766ns (25.846%)  route 2.198ns (74.154%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    8.337ns = ( 18.754 - 10.417 ) 
+    Source Clock Delay      (SCD):    9.103ns
+    Clock Pessimism Removal (CPR):    0.747ns
+  Clock Uncertainty:      0.122ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.234ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.439     1.439 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.604     4.043    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.139 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.571     5.711    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.799 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.656     7.455    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.551 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.552     9.103    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/substate_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y19         FDRE (Prop_fdre_C_Q)         0.518     9.621 r  bus_master0/uart_module0/uart_rx0/substate_reg[2]/Q
+                         net (fo=7, routed)           0.902    10.523    bus_master0/uart_module0/uart_rx0/substate_reg__0[2]
+    SLICE_X23Y19         LUT6 (Prop_lut6_I2_O)        0.124    10.647 r  bus_master0/uart_module0/uart_rx0/bit_index[2]_i_2/O
+                         net (fo=7, routed)           0.494    11.141    bus_master0/uart_module0/uart_rx0/bit_index[2]_i_2_n_0
+    SLICE_X23Y17         LUT6 (Prop_lut6_I4_O)        0.124    11.265 r  bus_master0/uart_module0/uart_rx0/rx_data_out[7]_i_1/O
+                         net (fo=17, routed)          0.802    12.067    bus_master0/uart_module0/uart_rx0/rx_data_out[7]_i_1_n_0
+    SLICE_X23Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]_lopt_replica/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                     10.417    10.417 r  
+    L5                                                0.000    10.417 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000    10.417    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         1.369    11.786 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           2.233    14.019    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    14.110 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           1.453    15.563    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.646 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.578    17.224    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    17.315 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          1.438    18.754    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]_lopt_replica/C
+                         clock pessimism              0.747    19.501    
+                         clock uncertainty           -0.122    19.379    
+    SLICE_X23Y15         FDRE (Setup_fdre_C_CE)      -0.205    19.174    bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         19.174    
+                         arrival time                         -12.067    
+  -------------------------------------------------------------------
+                         slack                                  7.107    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.165ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_tx0/substate_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_tx0/substate_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.189ns (61.083%)  route 0.120ns (38.917%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.900ns
+    Source Clock Delay      (SCD):    2.950ns
+    Clock Pessimism Removal (CPR):    0.937ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.552     2.950    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X19Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y19         FDRE (Prop_fdre_C_Q)         0.141     3.091 r  bus_master0/uart_module0/uart_tx0/substate_reg[1]/Q
+                         net (fo=6, routed)           0.120     3.211    bus_master0/uart_module0/uart_tx0/substate_reg__0[1]
+    SLICE_X18Y19         LUT5 (Prop_lut5_I2_O)        0.048     3.259 r  bus_master0/uart_module0/uart_tx0/substate[4]_i_1/O
+                         net (fo=1, routed)           0.000     3.259    bus_master0/uart_module0/uart_tx0/p_0_in[4]
+    SLICE_X18Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.821     3.900    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X18Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[4]/C
+                         clock pessimism             -0.937     2.963    
+    SLICE_X18Y19         FDRE (Hold_fdre_C_D)         0.131     3.094    bus_master0/uart_module0/uart_tx0/substate_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -3.094    
+                         arrival time                           3.259    
+  -------------------------------------------------------------------
+                         slack                                  0.165    
+
+Slack (MET) :             0.170ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/rx_data_out_reg[3]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.256ns  (logic 0.141ns (55.074%)  route 0.115ns (44.926%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.905ns
+    Source Clock Delay      (SCD):    2.956ns
+    Clock Pessimism Removal (CPR):    0.935ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.558     2.956    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X20Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X20Y15         FDRE (Prop_fdre_C_Q)         0.141     3.097 r  bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/Q
+                         net (fo=2, routed)           0.115     3.212    bus_master0/uart_module0/uart_rx0/data_temp[4]
+    SLICE_X23Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[3]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.826     3.905    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[3]_lopt_replica/C
+                         clock pessimism             -0.935     2.970    
+    SLICE_X23Y15         FDRE (Hold_fdre_C_D)         0.072     3.042    bus_master0/uart_module0/uart_rx0/rx_data_out_reg[3]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         -3.042    
+                         arrival time                           3.212    
+  -------------------------------------------------------------------
+                         slack                                  0.170    
+
+Slack (MET) :             0.173ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_tx0/substate_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_tx0/substate_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.306ns  (logic 0.186ns (60.702%)  route 0.120ns (39.298%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.900ns
+    Source Clock Delay      (SCD):    2.950ns
+    Clock Pessimism Removal (CPR):    0.937ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.552     2.950    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X19Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y19         FDRE (Prop_fdre_C_Q)         0.141     3.091 r  bus_master0/uart_module0/uart_tx0/substate_reg[1]/Q
+                         net (fo=6, routed)           0.120     3.211    bus_master0/uart_module0/uart_tx0/substate_reg__0[1]
+    SLICE_X18Y19         LUT4 (Prop_lut4_I2_O)        0.045     3.256 r  bus_master0/uart_module0/uart_tx0/substate[3]_i_1/O
+                         net (fo=1, routed)           0.000     3.256    bus_master0/uart_module0/uart_tx0/p_0_in[3]
+    SLICE_X18Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.821     3.900    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X18Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[3]/C
+                         clock pessimism             -0.937     2.963    
+    SLICE_X18Y19         FDRE (Hold_fdre_C_D)         0.120     3.083    bus_master0/uart_module0/uart_tx0/substate_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -3.083    
+                         arrival time                           3.256    
+  -------------------------------------------------------------------
+                         slack                                  0.173    
+
+Slack (MET) :             0.175ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/rx_data_out_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.257ns  (logic 0.141ns (54.812%)  route 0.116ns (45.188%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.012ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.901ns
+    Source Clock Delay      (SCD):    2.954ns
+    Clock Pessimism Removal (CPR):    0.935ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.556     2.954    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y17         FDRE (Prop_fdre_C_Q)         0.141     3.095 r  bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/Q
+                         net (fo=2, routed)           0.116     3.211    bus_master0/uart_module0/uart_rx0/data_temp[2]
+    SLICE_X23Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.822     3.901    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y19         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[5]/C
+                         clock pessimism             -0.935     2.966    
+    SLICE_X23Y19         FDRE (Hold_fdre_C_D)         0.070     3.036    bus_master0/uart_module0/uart_rx0/rx_data_out_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -3.036    
+                         arrival time                           3.211    
+  -------------------------------------------------------------------
+                         slack                                  0.175    
+
+Slack (MET) :             0.176ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_tx0/substate_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_tx0/substate_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.310ns  (logic 0.186ns (59.920%)  route 0.124ns (40.080%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.900ns
+    Source Clock Delay      (SCD):    2.950ns
+    Clock Pessimism Removal (CPR):    0.937ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.552     2.950    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X19Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y19         FDRE (Prop_fdre_C_Q)         0.141     3.091 r  bus_master0/uart_module0/uart_tx0/substate_reg[1]/Q
+                         net (fo=6, routed)           0.124     3.215    bus_master0/uart_module0/uart_tx0/substate_reg__0[1]
+    SLICE_X18Y19         LUT6 (Prop_lut6_I2_O)        0.045     3.260 r  bus_master0/uart_module0/uart_tx0/substate[5]_i_2/O
+                         net (fo=1, routed)           0.000     3.260    bus_master0/uart_module0/uart_tx0/p_0_in[5]
+    SLICE_X18Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.821     3.900    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X18Y19         FDRE                                         r  bus_master0/uart_module0/uart_tx0/substate_reg[5]/C
+                         clock pessimism             -0.937     2.963    
+    SLICE_X18Y19         FDRE (Hold_fdre_C_D)         0.121     3.084    bus_master0/uart_module0/uart_tx0/substate_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -3.084    
+                         arrival time                           3.260    
+  -------------------------------------------------------------------
+                         slack                                  0.176    
+
+Slack (MET) :             0.178ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/rx_data_out_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.263ns  (logic 0.141ns (53.584%)  route 0.122ns (46.416%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.904ns
+    Source Clock Delay      (SCD):    2.954ns
+    Clock Pessimism Removal (CPR):    0.935ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.556     2.954    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X21Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y17         FDRE (Prop_fdre_C_Q)         0.141     3.095 r  bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/Q
+                         net (fo=2, routed)           0.122     3.217    bus_master0/uart_module0/uart_rx0/data_temp[5]
+    SLICE_X21Y16         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.825     3.904    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X21Y16         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[2]/C
+                         clock pessimism             -0.935     2.969    
+    SLICE_X21Y16         FDRE (Hold_fdre_C_D)         0.070     3.039    bus_master0/uart_module0/uart_rx0/rx_data_out_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -3.039    
+                         arrival time                           3.217    
+  -------------------------------------------------------------------
+                         slack                                  0.178    
+
+Slack (MET) :             0.179ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/rx_data_out_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.262ns  (logic 0.141ns (53.727%)  route 0.121ns (46.273%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.902ns
+    Source Clock Delay      (SCD):    2.954ns
+    Clock Pessimism Removal (CPR):    0.935ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.556     2.954    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X20Y17         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X20Y17         FDRE (Prop_fdre_C_Q)         0.141     3.095 r  bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/Q
+                         net (fo=2, routed)           0.121     3.216    bus_master0/uart_module0/uart_rx0/data_temp[0]
+    SLICE_X20Y18         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.823     3.902    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X20Y18         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[7]/C
+                         clock pessimism             -0.935     2.967    
+    SLICE_X20Y18         FDRE (Hold_fdre_C_D)         0.070     3.037    bus_master0/uart_module0/uart_rx0/rx_data_out_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -3.037    
+                         arrival time                           3.216    
+  -------------------------------------------------------------------
+                         slack                                  0.179    
+
+Slack (MET) :             0.184ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_rx0/next_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.222%)  route 0.119ns (45.778%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.902ns
+    Source Clock Delay      (SCD):    2.953ns
+    Clock Pessimism Removal (CPR):    0.936ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.555     2.953    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y18         FDRE                                         r  bus_master0/uart_module0/uart_rx0/next_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y18         FDRE (Prop_fdre_C_Q)         0.141     3.094 r  bus_master0/uart_module0/uart_rx0/next_state_reg[1]/Q
+                         net (fo=3, routed)           0.119     3.213    bus_master0/uart_module0/uart_rx0/next_state_reg_n_0_[1]
+    SLICE_X22Y18         FDRE                                         r  bus_master0/uart_module0/uart_rx0/state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.823     3.902    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y18         FDRE                                         r  bus_master0/uart_module0/uart_rx0/state_reg[1]/C
+                         clock pessimism             -0.936     2.966    
+    SLICE_X22Y18         FDRE (Hold_fdre_C_D)         0.063     3.029    bus_master0/uart_module0/uart_rx0/state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -3.029    
+                         arrival time                           3.213    
+  -------------------------------------------------------------------
+                         slack                                  0.184    
+
+Slack (MET) :             0.197ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_rx0/rx_data_out_reg[4]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.286ns  (logic 0.164ns (57.356%)  route 0.122ns (42.644%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.905ns
+    Source Clock Delay      (SCD):    2.956ns
+    Clock Pessimism Removal (CPR):    0.935ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.558     2.956    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X22Y14         FDRE                                         r  bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y14         FDRE (Prop_fdre_C_Q)         0.164     3.120 r  bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/Q
+                         net (fo=2, routed)           0.122     3.242    bus_master0/uart_module0/uart_rx0/data_temp[3]
+    SLICE_X23Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[4]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.826     3.905    bus_master0/uart_module0/uart_rx0/CLK
+    SLICE_X23Y15         FDRE                                         r  bus_master0/uart_module0/uart_rx0/rx_data_out_reg[4]_lopt_replica/C
+                         clock pessimism             -0.935     2.970    
+    SLICE_X23Y15         FDRE (Hold_fdre_C_D)         0.075     3.045    bus_master0/uart_module0/uart_rx0/rx_data_out_reg[4]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         -3.045    
+                         arrival time                           3.242    
+  -------------------------------------------------------------------
+                         slack                                  0.197    
+
+Slack (MET) :             0.210ns  (arrival time - required time)
+  Source:                 bus_master0/uart_module0/uart_tx0/bit_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Destination:            bus_master0/uart_module0/uart_tx0/bit_index_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_OBUF  {rise@0.000ns fall@5.208ns period=10.417ns})
+  Path Group:             clk_out_OBUF
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_OBUF rise@0.000ns - clk_out_OBUF rise@0.000ns)
+  Data Path Delay:        0.346ns  (logic 0.209ns (60.343%)  route 0.137ns (39.657%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.899ns
+    Source Clock Delay      (SCD):    2.948ns
+    Clock Pessimism Removal (CPR):    0.936ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.207     0.207 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.057     1.264    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.547     1.837    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     1.887 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.485     2.372    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.398 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.550     2.948    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X18Y21         FDRE                                         r  bus_master0/uart_module0/uart_tx0/bit_index_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDRE (Prop_fdre_C_Q)         0.164     3.112 r  bus_master0/uart_module0/uart_tx0/bit_index_reg[0]/Q
+                         net (fo=4, routed)           0.137     3.249    bus_master0/uart_module0/uart_tx0/bit_index_reg_n_0_[0]
+    SLICE_X18Y20         LUT6 (Prop_lut6_I3_O)        0.045     3.294 r  bus_master0/uart_module0/uart_tx0/bit_index[2]_i_1/O
+                         net (fo=1, routed)           0.000     3.294    bus_master0/uart_module0/uart_tx0/bit_index[2]_i_1_n_0
+    SLICE_X18Y20         FDRE                                         r  bus_master0/uart_module0/uart_tx0/bit_index_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_OBUF rise edge)
+                                                      0.000     0.000 r  
+    L5                                                0.000     0.000 r  clk_in_hw (IN)
+                         net (fo=0)                   0.000     0.000    clk_in_hw
+    L5                   IBUF (Prop_ibuf_I_O)         0.395     0.395 r  clk_in_hw_IBUF_inst/O
+                         net (fo=1, routed)           1.231     1.626    clk_in_hw_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     1.655 r  clk_in_hw_IBUF_BUFG_inst/O
+                         net (fo=6, routed)           0.815     2.470    bus_master0/clock_generator0/clock_module_TE02770/clk_in_hw_IBUF_BUFG
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     2.523 r  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.528     3.050    clk_out_OBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     3.079 r  clk_out_OBUF_BUFG_inst/O
+                         net (fo=60, routed)          0.820     3.899    bus_master0/uart_module0/uart_tx0/CLK
+    SLICE_X18Y20         FDRE                                         r  bus_master0/uart_module0/uart_tx0/bit_index_reg[2]/C
+                         clock pessimism             -0.936     2.963    
+    SLICE_X18Y20         FDRE (Hold_fdre_C_D)         0.121     3.084    bus_master0/uart_module0/uart_tx0/bit_index_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -3.084    
+                         arrival time                           3.294    
+  -------------------------------------------------------------------
+                         slack                                  0.210    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out_OBUF
+Waveform(ns):       { 0.000 5.208 }
+Period(ns):         10.417
+Sources:            { bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            2.155         10.417      8.261      BUFGCTRL_X0Y0    clk_out_OBUF_BUFG_inst/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         10.417      9.168      MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X22Y16     bus_master0/uart_module0/uart_rx0/bit_index_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X22Y17     bus_master0/uart_module0/uart_rx0/bit_index_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X22Y16     bus_master0/uart_module0/uart_rx0/bit_index_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X20Y17     bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X23Y16     bus_master0/uart_module0/uart_rx0/data_temp_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X23Y17     bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X22Y14     bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.417      9.417      SLICE_X20Y15     bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       10.417      202.943    MMCME2_ADV_X1Y0  bus_master0/clock_generator0/clock_module_TE02770/MMCME2_BASE_inst/CLKOUT0
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y16     bus_master0/uart_module0/uart_rx0/bit_index_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y16     bus_master0/uart_module0/uart_rx0/bit_index_reg[2]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X23Y16     bus_master0/uart_module0/uart_rx0/data_temp_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y14     bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X20Y15     bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y15     bus_master0/uart_module0/uart_rx0/data_temp_reg[6]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X20Y16     bus_master0/uart_module0/uart_rx0/data_temp_reg[7]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X18Y21     bus_master0/uart_module0/uart_rx0/running_reg/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X21Y15     bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X23Y15     bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]_lopt_replica/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y16     bus_master0/uart_module0/uart_rx0/bit_index_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y17     bus_master0/uart_module0/uart_rx0/bit_index_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y16     bus_master0/uart_module0/uart_rx0/bit_index_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X20Y17     bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X23Y16     bus_master0/uart_module0/uart_rx0/data_temp_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X23Y17     bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y14     bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X20Y15     bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X21Y17     bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.208       4.708      SLICE_X22Y15     bus_master0/uart_module0/uart_rx0/data_temp_reg[6]/C
+
+
+

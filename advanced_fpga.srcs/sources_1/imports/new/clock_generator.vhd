@@ -41,7 +41,9 @@ architecture Behavioral of clock_generator is
     
     
     
-    signal clk          : std_logic;
+    signal clk                  : std_logic;
+    signal mmcm_stable          : std_logic;
+    signal clk_stable           : std_logic;
     signal counter_out  : std_logic_vector(11 downto 0);
     
     component clock_module_TE0277 is
@@ -58,7 +60,8 @@ architecture Behavioral of clock_generator is
                 CLK_100_O    : out STD_LOGIC := '0';
                 CLK_50_O     : out STD_LOGIC := '0'; 
                 CLK_25_O     : out STD_LOGIC := '0'; 
-                CLK_10_O     : out STD_LOGIC := '0' 
+                CLK_10_O     : out STD_LOGIC := '0';
+                STABLE_O     : out STD_LOGIC 
                );
     end component;
     
@@ -93,11 +96,23 @@ generic map( CLK_IN_PERIOD => 10.0,
 --              D => 1,
 --              O => 31.250)
 port map(
-    XCLK_I  => CLK_IN,
-    RESET_I => '0',
-    ENABLE_I => '1',
-    CLK_1000_O => clk
+    XCLK_I      => CLK_IN,
+    RESET_I     => '0',
+    ENABLE_I    => '1',
+    CLK_1000_O  => clk,
+    STABLE_O    => mmcm_stable
 );
+
+--STABLE_PROC: process (clk)
+--begin
+--  if rising_edge(clk) then
+--     clk_stable     <= '0';
+--     if mmcm_stable = '1' then
+--        clk_stable  <= clk;
+--     end if;
+--  end if;
+--end process;
+clk_stable  <= clk;
 
 --binary_counter0: binary_counter 
 ----generic map( N        => 5)
@@ -114,7 +129,7 @@ port map(
 --CLK_OUT <= counter_out(8); -- 115200 Hz
 --CLK_OUT <= counter_out(7); -- 115200 Hz
 
-CLK_OUT <= clk;
+CLK_OUT <= clk_stable;
 
 
 end Behavioral;

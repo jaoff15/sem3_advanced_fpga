@@ -80,7 +80,6 @@ end bus_master;
 architecture Behavioral of bus_master is
 
     signal clk_signal       : std_logic := '0';
-
     
     signal tx_done          : std_logic := '0';
     signal tx_busy          : std_logic := '0';
@@ -99,11 +98,11 @@ architecture Behavioral of bus_master is
     signal address_signal  : std_logic_vector(7 downto 0)  := (others => '0');
     signal data_signal     : std_logic_vector(31 downto 0) := (others => '0');
        
-
+    signal data_bus_out_signal : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
 
     component uart_module is
         Port    ( CLK_IN    : in  STD_LOGIC := '0';
-                  ENABLE_IN : in  std_logic := '0';
+                  RESET_IN : in  std_logic := '0';
                   TX_START  : in  std_logic := '0';
                   TX_OUT    : out std_logic := '0';
                   tx_done   : out std_logic := '0';
@@ -136,6 +135,7 @@ architecture Behavioral of bus_master is
     
     
 begin
+
 
 
 with rx_data_out_signal select
@@ -203,14 +203,10 @@ with rx_data_out_signal select
 SYNC_PROC: process (clk_in)
 begin
   if rising_edge(clk_in) then
-     if (reset_in = '1') then
-        state         <= S_WAIT;
---        tx_out_signal <= '1';
-     else
-        state         <= next_state;
---        tx_out_signal <= tx_out_signal_i;
-     end if;
-    
+    state         <= next_state;
+    if (reset_in = '1') then
+        state     <= S_WAIT;
+    end if;   
   end if;
 end process;
 
@@ -235,20 +231,29 @@ end process;
 --end process;
 
 
+data_bus_out <= data_bus_out_signal;
+
+
 NEXT_STATE_DECODE: process (rx_done_signal)
 begin
     if rising_edge(rx_done_signal) then
-      next_state <= state;  --default is to stay in current state
+      next_state            <= state;  --default is to stay in current state
+      address_signal        <= address_signal;
+      data_signal           <= data_signal;
+      data_bus_out_signal   <= data_bus_out_signal;
+      tx_start_signal       <= tx_start_signal;
+      tx_data               <= tx_data;
+        
         case (state) is
             -- Wait
             when S_WAIT =>
                 address_signal <= (others => '0');
                 data_signal    <= (others => '0');
+                
+                next_state <= S_WAIT;
                 -- Hashtag
                 if rx_data_out_signal = ASCII_HASHTAG and tx_busy = '0' then
                     next_state <= S1;
-                else 
-                    next_state <= S_WAIT;
                 end if;
             
             
@@ -418,9 +423,9 @@ begin
                 end if;
                 
             when S_Write =>
-                address_bus   <= address_signal;
-                data_bus_out  <= data_signal;
-                next_state    <= S_WAIT;
+                address_bus          <= address_signal;
+                data_bus_out_signal  <= data_signal;
+                next_state           <= S_WAIT;
                 
              when others =>
                 next_state <= S_WAIT;
@@ -469,7 +474,7 @@ rx_data_out <= rx_data_out_signal;
 uart_module0:uart_module 
 port map(
     CLK_IN      => clk_signal,  
-    ENABLE_IN   => '1',
+    RESET_IN    => '0',
     TX_OUT      => tx_out,
     TX_START    => tx_start_signal,
     TX_DATA     => tx_data,

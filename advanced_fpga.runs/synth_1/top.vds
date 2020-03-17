@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Mar 13 18:12:05 2020
-# Process ID: 6660
+# Start of session at: Tue Mar 17 08:14:13 2020
+# Process ID: 11882
 # Current directory: /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1/top.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6675 
+INFO: Helper process launched with PID 11891 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1289.555 ; gain = 86.887 ; free physical = 1529 ; free virtual = 10736
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1289.562 ; gain = 86.887 ; free physical = 7654 ; free virtual = 13558
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:19]
 INFO: [Synth 8-3491] module 'bus_master' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:34' bound to instance 'bus_master0' of component 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:83]
@@ -51,35 +51,35 @@ INFO: [Synth 8-638] synthesizing module 'bus_master' [/home/jacoboffersen/advanc
 	Parameter ASCII_R bound to: 8'b01010010 
 	Parameter ASCII_ww bound to: 8'b01110111 
 	Parameter ASCII_rr bound to: 8'b01110010 
-INFO: [Synth 8-3491] module 'uart_module' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:28' bound to instance 'uart_module0' of component 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:469]
+INFO: [Synth 8-3491] module 'uart_module' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:28' bound to instance 'uart_module0' of component 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:474]
 INFO: [Synth 8-638] synthesizing module 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:42]
-INFO: [Synth 8-3491] module 'uart_tx' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:37' bound to instance 'uart_tx0' of component 'uart_tx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:70]
-INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:49]
-WARNING: [Synth 8-614] signal 'tx_data_snapshot' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:93]
-WARNING: [Synth 8-614] signal 'bit_index' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:93]
-INFO: [Synth 8-226] default block is never used [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:116]
-WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:113]
-WARNING: [Synth 8-614] signal 'START_IN' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:113]
-WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:113]
-WARNING: [Synth 8-614] signal 'substate' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:113]
-WARNING: [Synth 8-614] signal 'substate_count' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:113]
-WARNING: [Synth 8-614] signal 'bit_index' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:113]
-INFO: [Synth 8-256] done synthesizing module 'uart_tx' (1#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:49]
-WARNING: [Synth 8-5640] Port 'reset' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:57]
-INFO: [Synth 8-3491] module 'uart_rx' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:28' bound to instance 'uart_rx0' of component 'uart_rx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:38]
-INFO: [Synth 8-226] default block is never used [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:110]
-INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:38]
+INFO: [Synth 8-3491] module 'uart_tx' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:37' bound to instance 'uart_tx0' of component 'uart_tx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:48]
+WARNING: [Synth 8-614] signal 'tx_out_signal_i' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:89]
+WARNING: [Synth 8-614] signal 'tx_data_snapshot' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:89]
+WARNING: [Synth 8-614] signal 'bit_index' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:89]
+INFO: [Synth 8-226] default block is never used [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:113]
+WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:109]
+WARNING: [Synth 8-614] signal 'tx_data_snapshot' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:109]
+WARNING: [Synth 8-614] signal 'START_IN' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:109]
+WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:109]
+WARNING: [Synth 8-614] signal 'substate' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:109]
+WARNING: [Synth 8-614] signal 'substate_count' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:109]
+WARNING: [Synth 8-614] signal 'bit_index' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (1#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:48]
+INFO: [Synth 8-3491] module 'uart_rx' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:28' bound to instance 'uart_rx0' of component 'uart_rx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:37]
+INFO: [Synth 8-226] default block is never used [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:105]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:37]
 INFO: [Synth 8-256] done synthesizing module 'uart_module' (3#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:42]
-INFO: [Synth 8-3491] module 'clock_generator' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:35' bound to instance 'clock_generator0' of component 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:483]
+INFO: [Synth 8-3491] module 'clock_generator' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:35' bound to instance 'clock_generator0' of component 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:488]
 INFO: [Synth 8-638] synthesizing module 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:40]
-WARNING: [Synth 8-5640] Port 'xtal_o' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:47]
-WARNING: [Synth 8-5640] Port 'stable_o' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:47]
+WARNING: [Synth 8-5640] Port 'xtal_o' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:49]
 	Parameter M bound to: 51.000000 - type: float 
 	Parameter D bound to: 5 - type: integer 
 	Parameter O bound to: 10.625000 - type: float 
 	Parameter CLK_IN_PERIOD bound to: 10.000000 - type: float 
-INFO: [Synth 8-3491] module 'clock_module_TE0277' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:33' bound to instance 'clock_module_TE02770' of component 'clock_module_TE0277' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:75]
+INFO: [Synth 8-3491] module 'clock_module_TE0277' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:33' bound to instance 'clock_module_TE02770' of component 'clock_module_TE0277' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:78]
 INFO: [Synth 8-638] synthesizing module 'clock_module_TE0277' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:61]
 	Parameter M bound to: 51.000000 - type: float 
 	Parameter D bound to: 5 - type: integer 
@@ -149,8 +149,6 @@ WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[11]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[10]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[9]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[8]
-WARNING: [Synth 8-3331] design uart_rx has unconnected port ENABLE_IN
-WARNING: [Synth 8-3331] design uart_tx has unconnected port ENABLE_IN
 WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[31]
 WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[30]
 WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[29]
@@ -176,7 +174,7 @@ WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[10]
 WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[9]
 WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[8]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.180 ; gain = 131.512 ; free physical = 1539 ; free virtual = 10747
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 7663 ; free virtual = 13568
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -189,10 +187,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.180 ; gain = 131.512 ; free physical = 1539 ; free virtual = 10747
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 7664 ; free virtual = 13568
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.180 ; gain = 131.512 ; free physical = 1539 ; free virtual = 10747
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 7664 ; free virtual = 13568
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -202,8 +200,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/constrs_1/imports/new/const.xdc]
-WARNING: [Vivado 12-507] No nets matched 'clk_in_hw_IBUF'. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/constrs_1/imports/new/const.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/constrs_1/imports/new/const.xdc:19]
+WARNING: [Vivado 12-507] No nets matched 'clk_in_hw_IBUF'. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/constrs_1/imports/new/const.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/constrs_1/imports/new/const.xdc:18]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/constrs_1/imports/new/const.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/constrs_1/imports/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -215,27 +213,25 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1659.219 ; gain = 0.000 ; free physical = 1325 ; free virtual = 10532
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1659.227 ; gain = 0.000 ; free physical = 7445 ; free virtual = 13350
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1369 ; free virtual = 10581
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7522 ; free virtual = 13427
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1369 ; free virtual = 10581
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7522 ; free virtual = 13427
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1371 ; free virtual = 10583
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7523 ; free virtual = 13428
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
-INFO: [Synth 8-5544] ROM "tx_out_signal_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "running" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
@@ -257,10 +253,9 @@ INFO: [Synth 8-5546] ROM "data_out" won't be mapped to RAM because it is too spa
                   s_stop |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
-WARNING: [Synth 8-327] inferring latch for variable 'tx_data_snapshot_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:119]
-WARNING: [Synth 8-327] inferring latch for variable 'tx_out_signal_i_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:86]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_data_snapshot_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:112]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1363 ; free virtual = 10575
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7515 ; free virtual = 13420
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -295,9 +290,8 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 9     
 	   4 Input      2 Bit        Muxes := 3     
 	  21 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
-	   4 Input      1 Bit        Muxes := 5     
-	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 11    
 	   3 Input      1 Bit        Muxes := 2     
 	  23 Input      1 Bit        Muxes := 1     
 	  21 Input      1 Bit        Muxes := 2     
@@ -321,8 +315,8 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      2 Bit        Muxes := 8     
 	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
 Module uart_rx 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -338,9 +332,8 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	   5 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
 Module clock_module_TE0277 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -391,7 +384,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 WARNING: [Synth 8-6014] Unused sequential element bus_master0/clock_generator0/clock_module_TE02770/STABLE_O_reg was removed.  [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:176]
-WARNING: [Synth 8-3936] Found unconnected internal register 'bus_master0/data_bus_out_reg' and it is trimmed from '32' to '8' bits. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:422]
+WARNING: [Synth 8-3936] Found unconnected internal register 'bus_master0/data_bus_out_signal_reg' and it is trimmed from '32' to '8' bits. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:234]
 INFO: [Synth 8-5546] ROM "bus_master0/uart_module0/uart_rx0/next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "bus_master0/next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "bus_master0/rxDataIsNumb" won't be mapped to RAM because it is too sparse
@@ -443,7 +436,7 @@ WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[10]) is 
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[9]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[8]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1350 ; free virtual = 10564
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7502 ; free virtual = 13409
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -455,13 +448,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1229 ; free virtual = 10443
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7378 ; free virtual = 13285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1225 ; free virtual = 10439
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -473,7 +466,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1225 ; free virtual = 10439
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -497,7 +490,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1226 ; free virtual = 10439
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -510,7 +503,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1226 ; free virtual = 10439
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -522,25 +515,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1226 ; free virtual = 10439
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1226 ; free virtual = 10439
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1226 ; free virtual = 10439
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1226 ; free virtual = 10439
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -558,53 +551,51 @@ Report Cell Usage:
 +------+------------+------+
 |1     |BUFG        |     2|
 |2     |LUT1        |     3|
-|3     |LUT2        |    19|
-|4     |LUT3        |    17|
-|5     |LUT4        |    10|
-|6     |LUT5        |    19|
-|7     |LUT6        |    50|
+|3     |LUT2        |    12|
+|4     |LUT3        |    13|
+|5     |LUT4        |    11|
+|6     |LUT5        |    27|
+|7     |LUT6        |    39|
 |8     |MMCME2_BASE |     1|
 |9     |FDRE        |    94|
-|10    |LD          |     1|
-|11    |IBUF        |     2|
-|12    |OBUF        |    18|
+|10    |IBUF        |     2|
+|11    |OBUF        |    18|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+---------------------------+--------------------+------+
 |      |Instance                   |Module              |Cells |
 +------+---------------------------+--------------------+------+
-|1     |top                        |                    |   236|
-|2     |  bus_master0              |bus_master          |   203|
+|1     |top                        |                    |   222|
+|2     |  bus_master0              |bus_master          |   189|
 |3     |    clock_generator0       |clock_generator     |     1|
 |4     |      clock_module_TE02770 |clock_module_TE0277 |     1|
-|5     |    uart_module0           |uart_module         |   146|
-|6     |      uart_rx0             |uart_rx             |   116|
-|7     |      uart_tx0             |uart_tx             |    30|
+|5     |    uart_module0           |uart_module         |   130|
+|6     |      uart_rx0             |uart_rx             |   102|
+|7     |      uart_tx0             |uart_tx             |    28|
 |8     |  segment_display0         |segment_display     |    10|
 +------+---------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1226 ; free virtual = 10439
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.219 ; gain = 131.512 ; free physical = 1280 ; free virtual = 10493
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.219 ; gain = 456.551 ; free physical = 1279 ; free virtual = 10493
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 131.512 ; free physical = 7428 ; free virtual = 13335
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7428 ; free virtual = 13335
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  LD => LDCE: 1 instances
+  A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 93 Warnings, 1 Critical Warnings and 0 Errors encountered.
+80 Infos, 90 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1667.227 ; gain = 477.125 ; free physical = 1277 ; free virtual = 10491
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1667.234 ; gain = 477.125 ; free physical = 7425 ; free virtual = 13333
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1691.238 ; gain = 0.000 ; free physical = 1278 ; free virtual = 10491
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 13 18:12:38 2020...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1691.246 ; gain = 0.000 ; free physical = 7425 ; free virtual = 13332
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 08:14:45 2020...

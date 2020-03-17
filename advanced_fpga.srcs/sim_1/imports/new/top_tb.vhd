@@ -70,8 +70,8 @@ architecture Testbench of top_tb is
 
     signal clk      : std_logic := '0';
     signal tx_start : std_logic := '0';  
-    signal tx_out   : std_logic;
-    signal rx_in    : std_logic;
+    signal tx_out   : std_logic := '0';
+    signal rx_in    : std_logic := '0';
     signal rx_data  : std_logic_vector(7 downto 0);
     
 
@@ -105,7 +105,7 @@ architecture Testbench of top_tb is
     signal tx_busy          : std_logic := '0';
     signal tx_start_signal  : std_logic := '1';
     signal tx_data          : std_logic_vector(7 downto 0) := (others => '0');
-    signal tx_out_tb        : std_logic;
+    signal tx_out_tb        : std_logic := '0';
     
     signal first : boolean := true;
     

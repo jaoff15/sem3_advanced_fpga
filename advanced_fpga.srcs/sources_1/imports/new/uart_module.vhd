@@ -27,7 +27,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity uart_module is
     Port    ( CLK_IN    : in  STD_LOGIC := '0';
-              ENABLE_IN : in  std_logic := '0';
+              RESET_IN  : in  std_logic := '0';
               TX_START  : in  std_logic := '0';
               TX_OUT    : out std_logic := '0';
               TX_DONE   : out std_logic := '0';
@@ -44,19 +44,18 @@ architecture Behavioral of uart_module is
 
     component uart_tx is
         Port    ( CLK_IN    : in  STD_LOGIC := '0';
-                  ENABLE_IN : in  std_logic := '0';
+                  RESET_IN : in  std_logic := '0';
                   START_IN  : in  std_logic := '0';
                   TX_BUSY   : out std_logic := '0';
                   TX_OUT    : out std_logic := '0';
                   TX_DONE   : out std_logic := '0';
-                  TX_DATA   : in std_logic_vector(7 downto 0) := (others => '0');
-                  RESET     : in std_logic  := '0'
+                  TX_DATA   : in std_logic_vector(7 downto 0) := (others => '0')
                   );
     end component;
 
     component uart_rx is
         Port    ( CLK_IN    : in  STD_LOGIC := '0';
-                  ENABLE_IN : in  std_logic := '0';
+                  RESET_IN  : in  std_logic := '0';
                   rx_in     : in  std_logic := '0';
                   rx_busy   : out std_logic := '0';
                   RX_done   : out std_logic := '0';
@@ -69,19 +68,18 @@ begin
 
 uart_tx0:uart_tx 
 port map(    CLK_IN     => CLK_IN,
-             ENABLE_IN  => enable_in,
+             RESET_IN   => RESET_IN,
              START_IN   => TX_START,
              TX_DATA    => TX_DATA,
              TX_OUT     => TX_OUT,
              tx_done    => tx_done,
-             tx_busy    => tx_busy,
-             reset      => '0'
+             tx_busy    => tx_busy
 );
 
 
 uart_rx0:uart_rx 
 port map(    CLK_IN    => CLK_IN,
-             ENABLE_IN => enable_in,
+             RESET_IN  => RESET_IN,
              rx_in     => rx_in,
              rx_done   => RX_done,
              rx_data   => rx_data

@@ -2,13 +2,13 @@
 2018.2
 Jun 14 2018
 20:07:38
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sim_1/imports/new/top_tb.vhd,1584110784,vhdl,,,,top_tb,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sim_1/imports/new/top_tb.vhd,1584382824,vhdl,,,,top_tb,,,,,,,,
 /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/binary_counter.vhd,1582991472,vhdl,,,,binary_counter,,,,,,,,
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd,1584112621,vhdl,,,,clock_generator,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd,1584390841,vhdl,,,,clock_generator,,,,,,,,
 /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd,1582989953,vhdl,,,,clock_module_te0277,,,,,,,,
 /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd,1584110785,vhdl,,,,top,,,,,,,,
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd,1583843316,vhdl,,,,uart_module,,,,,,,,
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd,1584118854,vhdl,,,,uart_rx,,,,,,,,
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd,1584112602,vhdl,,,,uart_tx,,,,,,,,
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd,1584109685,vhdl,,,,bus_master,,,,,,,,
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd,1584108276,vhdl,,,,segment_display,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd,1584390327,vhdl,,,,uart_module,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd,1584390424,vhdl,,,,uart_rx,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd,1584390435,vhdl,,,,uart_tx,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd,1584390602,vhdl,,,,bus_master,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd,1584380904,vhdl,,,,segment_display,,,,,,,,

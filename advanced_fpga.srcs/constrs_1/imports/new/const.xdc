@@ -1,6 +1,5 @@
 create_clock -period 10.000 [get_ports clk_in_hw]
 # create_clock -period 2170.139 [get_ports clk_in]
-# 115200 * 4 = 460800 => 1/460800 = 2170.1388888
 
 
 #set_property IOSTANDARD LVCMOS33 [get_ports CLK_IN]
