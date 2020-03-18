@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7s25ftgb196-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -29,6 +30,7 @@ set_property target_language VHDL [current_project]
 set_property ip_output_repo /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
+  /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/binary_counter.vhd
   /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd
   /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd
   /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd

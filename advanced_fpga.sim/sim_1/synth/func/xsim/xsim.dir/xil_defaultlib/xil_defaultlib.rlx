@@ -2,5 +2,5 @@
 2018.2
 Jun 14 2018
 20:07:38
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sim_1/imports/new/top_tb.vhd,1584110784,vhdl,,,,top_tb,,,,,,,,
-/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd,1584112602,vhdl,,,,uart_tx,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.sim/sim_1/synth/func/xsim/top_tb_func_synth.vhd,1584538922,vhdl,,,,binary_counter;bus_master;clock_generator;clock_module_te0277;segment_display;top;uart_module;uart_rx;uart_tx,,,,,,,,
+/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sim_1/imports/new/top_tb.vhd,1584537670,vhdl,,,,top_tb,,,,,,,,

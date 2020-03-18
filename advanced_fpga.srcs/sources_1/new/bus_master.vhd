@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,39 +33,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity bus_master is
-generic (
-    ASCII_HASHTAG   : std_logic_vector(7 downto 0) := "00100011";
-    ASCII_COLON     : std_logic_vector(7 downto 0) := "00111010";
-    ASCII_CR        : std_logic_vector(7 downto 0) := "00001101";
-    
-    ASCII_0         : std_logic_vector(7 downto 0) := "00110000";
-    ASCII_1         : std_logic_vector(7 downto 0) := "00110001";
-    ASCII_2         : std_logic_vector(7 downto 0) := "00110010";
-    ASCII_3         : std_logic_vector(7 downto 0) := "00110011";
-    ASCII_4         : std_logic_vector(7 downto 0) := "00110100";
-    ASCII_5         : std_logic_vector(7 downto 0) := "00110101";
-    ASCII_6         : std_logic_vector(7 downto 0) := "00110110";
-    ASCII_7         : std_logic_vector(7 downto 0) := "00110111";
-    ASCII_8         : std_logic_vector(7 downto 0) := "00111000";
-    ASCII_9         : std_logic_vector(7 downto 0) := "00111001";
-    ASCII_A         : std_logic_vector(7 downto 0) := "01000001";
-    ASCII_B         : std_logic_vector(7 downto 0) := "01000010";
-    ASCII_C         : std_logic_vector(7 downto 0) := "01000011";
-    ASCII_D         : std_logic_vector(7 downto 0) := "01000100";
-    ASCII_E         : std_logic_vector(7 downto 0) := "01000101";
-    ASCII_F         : std_logic_vector(7 downto 0) := "01000110";
-    ASCII_aa        : std_logic_vector(7 downto 0) := "01100001";
-    ASCII_bb        : std_logic_vector(7 downto 0) := "01100010";
-    ASCII_cc        : std_logic_vector(7 downto 0) := "01100011";
-    ASCII_dd        : std_logic_vector(7 downto 0) := "01100100";
-    ASCII_ee        : std_logic_vector(7 downto 0) := "01100101";
-    ASCII_ff        : std_logic_vector(7 downto 0) := "01100110";
-    
-    ASCII_W         : std_logic_vector(7 downto 0) := "01010111";
-    ASCII_R         : std_logic_vector(7 downto 0) := "01010010";
-    ASCII_ww        : std_logic_vector(7 downto 0) := "01110111";
-    ASCII_rr        : std_logic_vector(7 downto 0) := "01110010"  
-);
     Port ( clk_in       : in    STD_LOGIC := '0';
            reset_in     : in    STD_LOGIC := '0';
            rx_in        : in    STD_LOGIC := '0';
@@ -78,6 +46,38 @@ generic (
 end bus_master;
 
 architecture Behavioral of bus_master is
+
+    constant ASCII_HASHTAG : std_logic_vector(7 downto 0) := "00100011";
+    constant ASCII_COLON     : std_logic_vector(7 downto 0) := "00111010"; -- 0x3A
+    constant ASCII_CR        : std_logic_vector(7 downto 0) := "00001101"; -- 0x0D
+    
+    constant ASCII_0         : std_logic_vector(7 downto 0) := "00110000"; -- 0x30
+    constant ASCII_1         : std_logic_vector(7 downto 0) := "00110001"; -- 0x31
+    constant ASCII_2         : std_logic_vector(7 downto 0) := "00110010"; -- 0x32
+    constant ASCII_3         : std_logic_vector(7 downto 0) := "00110011"; -- 0x33
+    constant ASCII_4         : std_logic_vector(7 downto 0) := "00110100"; -- 0x34
+    constant ASCII_5         : std_logic_vector(7 downto 0) := "00110101"; -- 0x35
+    constant ASCII_6         : std_logic_vector(7 downto 0) := "00110110"; -- 0x36
+    constant ASCII_7         : std_logic_vector(7 downto 0) := "00110111"; -- 0x37
+    constant ASCII_8         : std_logic_vector(7 downto 0) := "00111000"; -- 0x38
+    constant ASCII_9         : std_logic_vector(7 downto 0) := "00111001"; -- 0x39
+    constant ASCII_A         : std_logic_vector(7 downto 0) := "01000001"; -- 0x41
+    constant ASCII_B         : std_logic_vector(7 downto 0) := "01000010"; -- 0x42
+    constant ASCII_C         : std_logic_vector(7 downto 0) := "01000011"; -- 0x43
+    constant ASCII_D         : std_logic_vector(7 downto 0) := "01000100"; -- 0x44
+    constant ASCII_E         : std_logic_vector(7 downto 0) := "01000101"; -- 0x45
+    constant ASCII_F         : std_logic_vector(7 downto 0) := "01000110"; -- 0x46
+    constant ASCII_aa        : std_logic_vector(7 downto 0) := "01100001"; -- 0x61
+    constant ASCII_bb        : std_logic_vector(7 downto 0) := "01100010"; -- 0x62
+    constant ASCII_cc        : std_logic_vector(7 downto 0) := "01100011"; -- 0x63
+    constant ASCII_dd        : std_logic_vector(7 downto 0) := "01100100"; -- 0x64
+    constant ASCII_ee        : std_logic_vector(7 downto 0) := "01100101"; -- 0x65
+    constant ASCII_ff        : std_logic_vector(7 downto 0) := "01100110"; -- 0x66
+    
+    constant ASCII_W         : std_logic_vector(7 downto 0) := "01010111"; -- 0x57
+    constant ASCII_R         : std_logic_vector(7 downto 0) := "01010010"; -- 0x52
+    constant ASCII_ww        : std_logic_vector(7 downto 0) := "01110111"; -- 0x77
+    constant ASCII_rr        : std_logic_vector(7 downto 0) := "01110010"; -- 0x72
 
     signal clk_signal       : std_logic := '0';
     

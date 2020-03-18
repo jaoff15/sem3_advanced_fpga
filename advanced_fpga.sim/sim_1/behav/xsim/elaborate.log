@@ -3,6 +3,31 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: /home/jacoboffersen/Program/vivado20182/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto c08e0bfea532472787824da243d15e7b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-718] formal port <ENABLE_IN> does not exist in entity <uart_tx>.  Please compare the definition of block <uart_tx> to its component declaration and its instantion to detect the mismatch. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sim_1/imports/new/top_tb.vhd:90]
-ERROR: [VRFC 10-718] formal port <RESET> does not exist in entity <uart_tx>.  Please compare the definition of block <uart_tx> to its component declaration and its instantion to detect the mismatch. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sim_1/imports/new/top_tb.vhd:96]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit top_tb in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture behavioral of entity xil_defaultlib.uart_tx [uart_tx_default]
+Compiling architecture behavioral of entity xil_defaultlib.uart_rx [uart_rx_default]
+Compiling architecture behavioral of entity xil_defaultlib.uart_module [uart_module_default]
+Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=48.0...]
+Compiling architecture mmcme2_base_v of entity unisim.MMCME2_BASE [\MMCME2_BASE(clkfbout_mult_f=48....]
+Compiling architecture rtl of entity xil_defaultlib.clock_module_TE0277 [\clock_module_TE0277(m=48.0,d=5,...]
+Compiling architecture behavioral of entity xil_defaultlib.binary_counter [\binary_counter(n=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.clock_generator [clock_generator_default]
+Compiling architecture behavioral of entity xil_defaultlib.bus_master [bus_master_default]
+Compiling architecture behavioral of entity xil_defaultlib.segment_display [\segment_display(module_adr="101...]
+Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
+Compiling architecture testbench of entity xil_defaultlib.top_tb
+Built simulation snapshot top_tb_behav

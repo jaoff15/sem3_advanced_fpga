@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Tue Mar 17 08:15:40 2020
+| Date         : Wed Mar 18 14:50:35 2020
 | Host         : JacobOffersen running 64-bit Ubuntu 19.10
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 38
+             Violations found: 97
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 38         |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 97         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -220,6 +220,301 @@ Related violations: <none>
 TIMING-17#38 Warning
 Non-clocked sequential cell  
 The clock pin bus_master0/tx_start_signal_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/bit_index_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/bit_index_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/bit_index_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/data_temp_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/next_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/next_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/running_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[0]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[1]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[2]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[3]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[4]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[5]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[6]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_data_out_reg[7]_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/rx_in_last_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/substate_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/substate_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/substate_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/substate_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/substate_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_rx0/substate_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/FSM_sequential_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/FSM_sequential_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/bit_index_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/bit_index_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/bit_index_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/substate_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/substate_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/substate_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/substate_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/substate_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/substate_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Warning
+Non-clocked sequential cell  
+The clock pin bus_master0/uart_module0/uart_tx0/tx_out_signal_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#90 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#91 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#92 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#93 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#94 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Warning
+Non-clocked sequential cell  
+The clock pin segment_display0/data_out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 

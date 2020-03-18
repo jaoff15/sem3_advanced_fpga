@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 17 08:14:13 2020
-# Process ID: 11882
+# Start of session at: Wed Mar 18 14:49:08 2020
+# Process ID: 28314
 # Current directory: /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1/top.vds
@@ -15,42 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11891 
+INFO: Helper process launched with PID 28337 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1289.562 ; gain = 86.887 ; free physical = 7654 ; free virtual = 13558
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1289.551 ; gain = 86.887 ; free physical = 4990 ; free virtual = 11938
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:19]
-INFO: [Synth 8-3491] module 'bus_master' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:34' bound to instance 'bus_master0' of component 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:83]
-INFO: [Synth 8-638] synthesizing module 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:80]
-	Parameter ASCII_HASHTAG bound to: 8'b00100011 
-	Parameter ASCII_COLON bound to: 8'b00111010 
-	Parameter ASCII_CR bound to: 8'b00001101 
-	Parameter ASCII_0 bound to: 8'b00110000 
-	Parameter ASCII_1 bound to: 8'b00110001 
-	Parameter ASCII_2 bound to: 8'b00110010 
-	Parameter ASCII_3 bound to: 8'b00110011 
-	Parameter ASCII_4 bound to: 8'b00110100 
-	Parameter ASCII_5 bound to: 8'b00110101 
-	Parameter ASCII_6 bound to: 8'b00110110 
-	Parameter ASCII_7 bound to: 8'b00110111 
-	Parameter ASCII_8 bound to: 8'b00111000 
-	Parameter ASCII_9 bound to: 8'b00111001 
-	Parameter ASCII_A bound to: 8'b01000001 
-	Parameter ASCII_B bound to: 8'b01000010 
-	Parameter ASCII_C bound to: 8'b01000011 
-	Parameter ASCII_D bound to: 8'b01000100 
-	Parameter ASCII_E bound to: 8'b01000101 
-	Parameter ASCII_F bound to: 8'b01000110 
-	Parameter ASCII_aa bound to: 8'b01100001 
-	Parameter ASCII_bb bound to: 8'b01100010 
-	Parameter ASCII_cc bound to: 8'b01100011 
-	Parameter ASCII_dd bound to: 8'b01100100 
-	Parameter ASCII_ee bound to: 8'b01100101 
-	Parameter ASCII_ff bound to: 8'b01100110 
-	Parameter ASCII_W bound to: 8'b01010111 
-	Parameter ASCII_R bound to: 8'b01010010 
-	Parameter ASCII_ww bound to: 8'b01110111 
-	Parameter ASCII_rr bound to: 8'b01110010 
+INFO: [Synth 8-3491] module 'bus_master' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:35' bound to instance 'bus_master0' of component 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:48]
 INFO: [Synth 8-3491] module 'uart_module' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:28' bound to instance 'uart_module0' of component 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:474]
 INFO: [Synth 8-638] synthesizing module 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:42]
 INFO: [Synth 8-3491] module 'uart_tx' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:37' bound to instance 'uart_tx0' of component 'uart_tx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:69]
@@ -75,21 +46,21 @@ INFO: [Synth 8-256] done synthesizing module 'uart_module' (3#1) [/home/jacoboff
 INFO: [Synth 8-3491] module 'clock_generator' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:35' bound to instance 'clock_generator0' of component 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:488]
 INFO: [Synth 8-638] synthesizing module 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:40]
 WARNING: [Synth 8-5640] Port 'xtal_o' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:49]
-	Parameter M bound to: 51.000000 - type: float 
-	Parameter D bound to: 5 - type: integer 
-	Parameter O bound to: 10.625000 - type: float 
+	Parameter M bound to: 62.375000 - type: float 
+	Parameter D bound to: 9 - type: integer 
+	Parameter O bound to: 5.875000 - type: float 
 	Parameter CLK_IN_PERIOD bound to: 10.000000 - type: float 
 INFO: [Synth 8-3491] module 'clock_module_TE0277' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:33' bound to instance 'clock_module_TE02770' of component 'clock_module_TE0277' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:78]
 INFO: [Synth 8-638] synthesizing module 'clock_module_TE0277' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:61]
-	Parameter M bound to: 51.000000 - type: float 
-	Parameter D bound to: 5 - type: integer 
-	Parameter O bound to: 10.625000 - type: float 
+	Parameter M bound to: 62.375000 - type: float 
+	Parameter D bound to: 9 - type: integer 
+	Parameter O bound to: 5.875000 - type: float 
 	Parameter CLK_IN_PERIOD bound to: 10.000000 - type: float 
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 51.000000 - type: float 
+	Parameter CLKFBOUT_MULT_F bound to: 62.375000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 10.625000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 5.875000 - type: float 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT1_DIVIDE bound to: 2 - type: integer 
@@ -111,19 +82,24 @@ INFO: [Synth 8-638] synthesizing module 'clock_module_TE0277' [/home/jacoboffers
 	Parameter CLKOUT6_DIVIDE bound to: 100 - type: integer 
 	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
-	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 9 - type: integer 
 	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
 	Parameter STARTUP_WAIT bound to: 0 - type: bool 
 INFO: [Synth 8-113] binding component instance 'MMCME2_BASE_inst' to cell 'MMCME2_BASE' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:98]
 INFO: [Synth 8-256] done synthesizing module 'clock_module_TE0277' (4#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:61]
-INFO: [Synth 8-256] done synthesizing module 'clock_generator' (5#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'bus_master' (6#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:80]
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'binary_counter' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/binary_counter.vhd:6' bound to instance 'binary_counter0' of component 'binary_counter' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'binary_counter' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/binary_counter.vhd:13]
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'binary_counter' (5#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/binary_counter.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'clock_generator' (6#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'bus_master' (7#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:48]
 	Parameter module_adr bound to: 8'b10101011 
-INFO: [Synth 8-3491] module 'segment_display' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:34' bound to instance 'segment_display0' of component 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:96]
-INFO: [Synth 8-638] synthesizing module 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:43]
+INFO: [Synth 8-3491] module 'segment_display' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:35' bound to instance 'segment_display0' of component 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:44]
 	Parameter module_adr bound to: 8'b10101011 
-INFO: [Synth 8-256] done synthesizing module 'segment_display' (7#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'top' (8#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'segment_display' (8#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:19]
 WARNING: [Synth 8-3331] design segment_display has unconnected port reset_in
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[31]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[30]
@@ -174,7 +150,7 @@ WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[10]
 WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[9]
 WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[8]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 7663 ; free virtual = 13568
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.176 ; gain = 131.512 ; free physical = 5000 ; free virtual = 11948
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -187,10 +163,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 7664 ; free virtual = 13568
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.176 ; gain = 131.512 ; free physical = 4998 ; free virtual = 11947
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 7664 ; free virtual = 13568
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.176 ; gain = 131.512 ; free physical = 4998 ; free virtual = 11947
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -213,37 +189,31 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1659.227 ; gain = 0.000 ; free physical = 7445 ; free virtual = 13350
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1659.215 ; gain = 0.000 ; free physical = 4776 ; free virtual = 11728
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7522 ; free virtual = 13427
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4842 ; free virtual = 11804
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7522 ; free virtual = 13427
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4842 ; free virtual = 11804
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7523 ; free virtual = 13428
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4844 ; free virtual = 11806
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
 INFO: [Synth 8-5544] ROM "running" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rxDataIsWrite" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rxDataIsRead" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rxDataIsNumb" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "rxDataNumb" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "address_bus" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "data_out_signal" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "data_out" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -255,7 +225,7 @@ INFO: [Synth 8-5546] ROM "data_out" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
 WARNING: [Synth 8-327] inferring latch for variable 'tx_data_snapshot_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:112]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7515 ; free virtual = 13420
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4824 ; free virtual = 11798
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,12 +239,13 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 2     
 	                8 Bit    Registers := 6     
 	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 2     
+	                5 Bit    Registers := 3     
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 5     
@@ -284,18 +255,16 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit        Muxes := 2     
 	  21 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 3     
 	  23 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
 	   4 Input      2 Bit        Muxes := 3     
 	  21 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 2     
 	  23 Input      1 Bit        Muxes := 1     
-	  21 Input      1 Bit        Muxes := 2     
-	  22 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -338,6 +307,12 @@ Module clock_module_TE0277
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
+Module binary_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
 Module bus_master 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -350,23 +325,19 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit        Muxes := 1     
 	  21 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 3     
 	  23 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 	  21 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 2     
 	  23 Input      1 Bit        Muxes := 1     
-	  21 Input      1 Bit        Muxes := 2     
-	  22 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 3     
 Module segment_display 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -386,13 +357,8 @@ Warning: Parallel synthesis criteria is not met
 WARNING: [Synth 8-6014] Unused sequential element bus_master0/clock_generator0/clock_module_TE02770/STABLE_O_reg was removed.  [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:176]
 WARNING: [Synth 8-3936] Found unconnected internal register 'bus_master0/data_bus_out_signal_reg' and it is trimmed from '32' to '8' bits. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:234]
 INFO: [Synth 8-5546] ROM "bus_master0/uart_module0/uart_rx0/next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bus_master0/next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "bus_master0/rxDataIsNumb" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bus_master0/next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bus_master0/next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bus_master0/next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "bus_master0/rxDataNumb" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "segment_display0/data_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[7]' (FDE) to 'bus_master0/tx_data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[6]' (FDE) to 'bus_master0/tx_data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[5]' (FDE) to 'bus_master0/tx_data_reg[0]'
@@ -436,7 +402,7 @@ WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[10]) is 
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[9]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[8]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7502 ; free virtual = 13409
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4811 ; free virtual = 11785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -448,13 +414,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7378 ; free virtual = 13285
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4708 ; free virtual = 11659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11655
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -466,7 +432,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -490,7 +456,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -503,7 +469,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -515,25 +481,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -550,14 +516,14 @@ Report Cell Usage:
 |      |Cell        |Count |
 +------+------------+------+
 |1     |BUFG        |     2|
-|2     |LUT1        |     3|
-|3     |LUT2        |    12|
-|4     |LUT3        |    13|
-|5     |LUT4        |    11|
-|6     |LUT5        |    27|
+|2     |LUT1        |     4|
+|3     |LUT2        |    13|
+|4     |LUT3        |    15|
+|5     |LUT4        |    13|
+|6     |LUT5        |    28|
 |7     |LUT6        |    39|
 |8     |MMCME2_BASE |     1|
-|9     |FDRE        |    94|
+|9     |FDRE        |    99|
 |10    |IBUF        |     2|
 |11    |OBUF        |    18|
 +------+------------+------+
@@ -566,21 +532,22 @@ Report Instance Areas:
 +------+---------------------------+--------------------+------+
 |      |Instance                   |Module              |Cells |
 +------+---------------------------+--------------------+------+
-|1     |top                        |                    |   222|
-|2     |  bus_master0              |bus_master          |   189|
-|3     |    clock_generator0       |clock_generator     |     1|
-|4     |      clock_module_TE02770 |clock_module_TE0277 |     1|
-|5     |    uart_module0           |uart_module         |   130|
-|6     |      uart_rx0             |uart_rx             |   102|
-|7     |      uart_tx0             |uart_tx             |    28|
-|8     |  segment_display0         |segment_display     |    10|
+|1     |top                        |                    |   234|
+|2     |  bus_master0              |bus_master          |   201|
+|3     |    clock_generator0       |clock_generator     |    11|
+|4     |      binary_counter0      |binary_counter      |    10|
+|5     |      clock_module_TE02770 |clock_module_TE0277 |     1|
+|6     |    uart_module0           |uart_module         |   131|
+|7     |      uart_rx0             |uart_rx             |   103|
+|8     |      uart_tx0             |uart_tx             |    28|
+|9     |  segment_display0         |segment_display     |    10|
 +------+---------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7374 ; free virtual = 13281
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.227 ; gain = 131.512 ; free physical = 7428 ; free virtual = 13335
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.227 ; gain = 456.551 ; free physical = 7428 ; free virtual = 13335
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.215 ; gain = 131.512 ; free physical = 4757 ; free virtual = 11708
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4757 ; free virtual = 11708
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -591,11 +558,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-80 Infos, 90 Warnings, 1 Critical Warnings and 0 Errors encountered.
+72 Infos, 90 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1667.234 ; gain = 477.125 ; free physical = 7425 ; free virtual = 13333
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1667.223 ; gain = 477.125 ; free physical = 4756 ; free virtual = 11707
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1691.246 ; gain = 0.000 ; free physical = 7425 ; free virtual = 13332
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 08:14:45 2020...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1691.234 ; gain = 0.000 ; free physical = 4758 ; free virtual = 11708
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 14:49:41 2020...

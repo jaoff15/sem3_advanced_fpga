@@ -33,7 +33,7 @@
         <spirit:instanceName>clk_wiz_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="6.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_clk_wiz_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_clk_wiz_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
