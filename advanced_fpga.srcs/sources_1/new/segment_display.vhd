@@ -38,7 +38,10 @@ entity segment_display is
                 reset_in    : in  std_logic                      := '0';
                 adr_in      : in  STD_LOGIC_VECTOR (7  downto 0) := (others => '0');
                 data_in     : in  STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
-                data_out    : out STD_LOGIC_VECTOR (7  downto 0) := (others => '0'));
+                data_out    : out STD_LOGIC_VECTOR (7  downto 0) := (others => '0');
+                hw_in       : in  STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+                hw_out      : out STD_LOGIC_VECTOR (7  downto 0) := not("00101000") -- 1
+                );
 end segment_display;
 
 architecture Behavioral of segment_display is
@@ -63,7 +66,7 @@ SYNC_PROC: process (clk_in)
 begin
   if rising_edge(clk_in) then
      if adr_in = module_adr then
-        data_out(7 downto 0) <= data_out_signal;
+        hw_out(7 downto 0) <= data_out_signal;
      end if;
   end if;
 end process;

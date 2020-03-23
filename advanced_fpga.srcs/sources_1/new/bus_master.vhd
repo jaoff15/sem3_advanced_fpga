@@ -38,7 +38,8 @@ entity bus_master is
            rx_in        : in    STD_LOGIC := '0';
            tx_out       : out   STD_LOGIC := '0';
            clk_out      : out   STD_LOGIC := '0';
-           data_bus_in  : in    STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+--           data_bus_in  : in    STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           data_bus_in  : in    STD_LOGIC_VECTOR(31 downto 0) := x"01234567";
            data_bus_out : out   STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
            address_bus  : out   STD_LOGIC_VECTOR(7  downto 0) := (others => '0');
            rx_data_out  : out   std_logic_vector(7  downto 0) := (others => '0')
@@ -81,7 +82,7 @@ architecture Behavioral of bus_master is
 
     signal clk_signal       : std_logic := '0';
     
-    signal tx_done          : std_logic := '0';
+    signal tx_done_signal   : std_logic := '0';
     signal tx_busy          : std_logic := '0';
     --signal tx_out_signal    : std_logic := '0';
     signal tx_start_signal  : std_logic := '0';
@@ -91,7 +92,8 @@ architecture Behavioral of bus_master is
     --signal tx_start_counter   : std_logic_vector(24 downto 0) := (others => '0');
 
     signal rx_data_out_signal      : std_logic_vector(7 downto 0);
-    signal rx_done_signal   : std_logic;
+    signal rx_done_signal       : std_logic;
+    signal rx_done_signal_last  : std_logic;
     signal tx_index         : integer range 0 to 10 := 0;
     
     
@@ -124,6 +126,9 @@ architecture Behavioral of bus_master is
     S2_R, S3_R, S4_R, S5_R, S_Read, 
     S2_W, S3_W, S4_W, S5_W, S6_W, S7_W, S8_W, S9_W, S10_W, S11_W, S12_W, S13_W, S_Write);
     signal state, next_state : T_STATE;
+    
+    type t_read_state is (s_wait, s_tx1, s_tx2, s_tx3, s_tx4, s_tx5, s_tx6, s_tx7, s_tx8);
+    signal read_state, next_read_state, last_read_state : t_read_state;
 
     signal rxDataIsNumb  : boolean := false;
     signal rxDataNumb    : std_logic_vector(3 downto 0) := (others => '0');
@@ -131,12 +136,14 @@ architecture Behavioral of bus_master is
     signal rxDataIsRead  : boolean := false;
 
 
+    signal startRead     : std_logic := '0';
+    signal tx_data_signal: std_logic_vector(7 downto 0) := (others => '0');
 --    signal bit_index : integer range 0 to 7 := 0;
     
     
 begin
 
-
+tx_data <= tx_data_signal;
 
 with rx_data_out_signal select
     rxDataIsNumb <= true when ASCII_0,
@@ -234,27 +241,32 @@ end process;
 data_bus_out <= data_bus_out_signal;
 
 
-NEXT_STATE_DECODE: process (rx_done_signal)
+NEXT_STATE_DECODE: process (clk_in)
 begin
-    if rising_edge(rx_done_signal) then
+    if (rx_done_signal_last = '0' and rx_done_signal = '1') or 
+    (next_read_state = s_wait and last_read_state = s_tx8) then
       next_state            <= state;  --default is to stay in current state
       address_signal        <= address_signal;
       data_signal           <= data_signal;
       data_bus_out_signal   <= data_bus_out_signal;
-      tx_start_signal       <= tx_start_signal;
-      tx_data               <= tx_data;
-        
+      --tx_start_signal       <= tx_start_signal;
+     -- tx_data               <= tx_data;
+      
+      startRead      <= '0';
         case (state) is
             -- Wait
             when S_WAIT =>
+                
                 address_signal <= (others => '0');
                 data_signal    <= (others => '0');
                 
                 next_state <= S_WAIT;
                 -- Hashtag
+
                 if rx_data_out_signal = ASCII_HASHTAG and tx_busy = '0' then
                     next_state <= S1;
                 end if;
+
             
             
             when S1 =>
@@ -268,11 +280,13 @@ begin
              -- ************** READ **************
             when S2_R =>
                 -- ':'
+
                 if rx_data_out_signal = ASCII_COLON then
                     next_state <= S3_R;
                 else 
                     next_state <= S_WAIT;
                 end if;
+
              
             when S3_R =>
                 -- '0->F'
@@ -295,17 +309,21 @@ begin
             when S5_R =>
                 -- 'CR'
                 if rx_data_out_signal = ASCII_CR then
+--                    next_state  <= S_Read;
                     next_state  <= S_Read;
                     address_bus <= address_signal;
+                    startRead   <= '1';
                 else 
                     next_state  <= S_WAIT;
                 end if;
                 
             -- Read
             when S_Read =>
-                tx_data         <= data_bus_in(7 downto 0);
-                tx_start_signal <= '1';
-                next_state      <= S_WAIT;
+                if next_read_state = S_WAIT then
+    --                tx_data         <= data_bus_in(7 downto 0);
+    --                tx_start_signal <= '1';
+                    next_state      <= S_WAIT;
+                end if;
                 
             -- ************** WRITE **************
             when S2_W =>
@@ -430,11 +448,150 @@ begin
              when others =>
                 next_state <= S_WAIT;
         end case;
-  end if;
+    end if;
 end process;
 
 
 
+
+
+READ_SYNC_PROC: process (clk_in)
+begin
+  if rising_edge(clk_in) then
+     if (RESET_IN = '1') then
+        read_state         <= S_WAIT;
+--        tx_out_signal <= '1';
+     else
+        read_state         <= next_read_state;
+--        tx_out_signal <= tx_out_signal_i;
+     end if;
+    
+  end if;
+end process;
+
+--MOORE State-Machine - Outputs based on state only
+READ_OUTPUT_DECODE: process (read_state)
+    variable DATA       : std_logic_vector(3 downto 0) := x"0";
+    variable DATA_ASCII : std_logic_vector(7 downto 0) := x"00";
+begin
+    tx_start_signal <= '0';
+    
+    DATA := x"0";
+    
+    if read_state = S_WAIT then 
+    
+    elsif read_state = s_tx1 then
+        DATA            := data_bus_in(31 downto 28);
+        tx_start_signal <= '1';
+        
+    elsif read_state = s_tx2 then
+        DATA            := data_bus_in(27 downto 24);
+        tx_start_signal <= '1';
+    
+    elsif read_state = s_tx3 then
+        DATA            := data_bus_in(23 downto 20);
+        tx_start_signal <= '1';
+    
+    elsif read_state = s_tx4 then
+        DATA            := data_bus_in(19 downto 16);
+        tx_start_signal <= '1';
+    
+    elsif read_state = s_tx5 then
+        DATA            := data_bus_in(15 downto 12);
+        tx_start_signal <= '1';
+        
+    elsif read_state = s_tx6 then
+        DATA            := data_bus_in(11 downto 8);
+        tx_start_signal <= '1';
+    
+    elsif read_state = s_tx7 then
+        DATA            := data_bus_in(7 downto 4);
+        tx_start_signal <= '1';
+    
+    elsif read_state = s_tx8 then
+        DATA            := data_bus_in(3 downto 0);
+        tx_start_signal <= '1';
+    end if;
+    
+    case (DATA) is 
+        when x"0"   => DATA_ASCII := ASCII_0;
+        when x"1"   => DATA_ASCII := ASCII_1;
+        when x"2"   => DATA_ASCII := ASCII_2;
+        when x"3"   => DATA_ASCII := ASCII_3;
+        when x"4"   => DATA_ASCII := ASCII_4;
+        when x"5"   => DATA_ASCII := ASCII_5;
+        when x"6"   => DATA_ASCII := ASCII_6;
+        when x"7"   => DATA_ASCII := ASCII_7;
+        when x"8"   => DATA_ASCII := ASCII_8;
+        when x"9"   => DATA_ASCII := ASCII_9;
+        when x"A"   => DATA_ASCII := ASCII_a;
+        when x"B"   => DATA_ASCII := ASCII_b;
+        when x"C"   => DATA_ASCII := ASCII_c;
+        when x"D"   => DATA_ASCII := ASCII_d;
+        when x"E"   => DATA_ASCII := ASCII_e;
+        when x"F"   => DATA_ASCII := ASCII_f;
+        when others => DATA_ASCII := ASCII_0;
+    end case;
+    
+    tx_data_signal <= DATA_ASCII;
+    
+end process;
+
+
+READ_NEXT_STATE_DECODE: process (startRead, tx_done_signal)
+begin
+  next_read_state        <= read_state;  --default is to stay in current state
+  
+  case (read_state) is
+    when S_WAIT =>
+        if startRead = '1' then
+            next_read_state <= s_tx1;
+        end if;
+    
+    when s_tx1 =>
+        if tx_done_signal = '1' then
+             next_read_state <= s_tx2;
+        end if;
+    
+    when s_tx2 =>
+        if tx_done_signal = '1' then
+             next_read_state <= s_tx3;
+        end if;
+    
+    when s_tx3 =>
+        if tx_done_signal = '1' then
+             next_read_state <= s_tx4;
+        end if;
+    
+    when s_tx4 =>
+        if tx_done_signal = '1' then
+            next_read_state <= s_tx5;
+        end if;
+    
+    when s_tx5 =>
+        if tx_done_signal = '1' then
+           next_read_state <= s_tx6;
+        end if;
+       
+    when s_tx6 =>
+        if tx_done_signal = '1' then
+            next_read_state <= s_tx7;
+        end if;
+    
+    when s_tx7 =>
+        if tx_done_signal = '1' then
+            next_read_state <= s_tx8;
+        end if;
+    
+    when s_tx8 =>
+        if tx_done_signal = '1' then
+            next_read_state <= s_wait;
+        end if;
+        
+     when others =>
+        next_read_state <= S_WAIT;
+  end case;
+end process;
 
              
 ---- Control output
@@ -477,8 +634,8 @@ port map(
     RESET_IN    => '0',
     TX_OUT      => tx_out,
     TX_START    => tx_start_signal,
-    TX_DATA     => tx_data,
-    tx_done     => tx_done,
+    TX_DATA     => tx_data_signal,
+    tx_done     => tx_done_signal,
     tx_busy     => tx_busy,
     RX_IN       => rx_in,
     rx_done     => rx_done_signal,
@@ -492,5 +649,15 @@ port map(
 );
 
 clk_out <= clk_signal;
+
+
+process (CLK_IN)
+begin -- process
+    if rising_edge(CLK_IN) then
+        rx_done_signal_last <= rx_done_signal;
+        last_read_state <= read_state;
+    end if;
+end process;
+
 
 end Behavioral;

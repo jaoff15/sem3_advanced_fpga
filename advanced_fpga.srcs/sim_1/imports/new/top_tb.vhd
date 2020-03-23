@@ -114,6 +114,7 @@ architecture Testbench of top_tb is
            clk_out     : out std_logic := '0';
            tx_out_hw   : out std_logic := '0';
            rx_in_hw    : in  std_logic := '0';
+           input_hw         : in  std_logic_vector(7 downto 0) := x"34";
        --    tx_active   : in  std_logic := '0';
         --tx_start : in  std_logic;
            rx_data_hw  : out std_logic_vector(7 downto 0) := (others => '0'));
@@ -164,12 +165,43 @@ end process;
 test_tx : process
   variable D : std_logic_vector(7 downto 0) := "00000000";
   variable x :integer   := 0;
+  variable done: boolean := false;
 begin
     tx_start <= '0';
     wait for 2us;
     tx_start <= '1';
     tx_out_tb <= '1';
     loop
+--        case x is
+--            when 0      => D := ASCII_HASHTAG;
+--            when 1      => D := ASCII_w;
+--            when 2      => D := ASCII_COLON;
+--            when 3      => D := ASCII_a;
+--            when 4      => D := ASCII_B;
+--            when 5      => D := ASCII_COLON;
+--            when 6      => D := ASCII_0;
+--            when 7      => D := ASCII_0;
+--            when 8      => D := ASCII_0;
+--            when 9      => D := ASCII_0;
+--            when 10     => D := ASCII_0;
+--            when 11     => D := ASCII_0;
+--            when 12     => D := ASCII_0;
+--            when 13     => D := ASCII_5;
+--            when 14     => D := ascii_cr;
+--            when others => D := (others => '0');
+--                        done := true;
+--        end case;
+        
+--        case x is
+--            when 0      => D := ASCII_HASHTAG;
+--            when 1      => D := ASCII_r;
+--            when 2      => D := ASCII_COLON;
+--            when 3      => D := ASCII_9;
+--            when 4      => D := ASCII_8;
+--            when 5      => D := ascii_cr;
+--            when others => D := (others => '0');
+--                           done := true;
+--        end case;
         case x is
             when 0      => D := ASCII_HASHTAG;
             when 1      => D := ASCII_w;
@@ -186,19 +218,30 @@ begin
             when 12     => D := ASCII_0;
             when 13     => D := ASCII_5;
             when 14     => D := ascii_cr;
+            when 15     => D := ASCII_HASHTAG;
+            when 16     => D := ASCII_r;
+            when 17     => D := ASCII_COLON;
+            when 18     => D := ASCII_9;
+            when 19     => D := ASCII_8;
+            when 20     => D := ascii_cr;
             when others => D := (others => '0');
+                        done := true;
         end case;
+
         
-        wait for 60us;  -- Leave tx high for 6us
-        tx_out_tb<='0';         -- Start bit
-        
-        for i in 0 to 7 loop
-            wait for 10us;
-            tx_out_tb<=D(i);
-        END LOOP;
-        
-        wait for 10us;
+        if done = false then
+            wait for 8.68us;  -- Leave tx high for 6us
+            tx_out_tb<='0';         -- Start bit
+            
+            for i in 0 to 7 loop
+                wait for 8.68us;
+                tx_out_tb<=D(i);
+            END LOOP;
+            
+            wait for 8.68us;
+        end if;
         tx_out_tb<='1';       -- stop bit
+            
         
         wait for 10us;
         x:=x+1;

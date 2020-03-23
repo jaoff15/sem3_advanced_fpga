@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Mar 18 14:49:08 2020
-# Process ID: 28314
+# Start of session at: Mon Mar 23 19:45:29 2020
+# Process ID: 8312
 # Current directory: /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1/top.vds
@@ -15,14 +15,31 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28337 
+INFO: Helper process launched with PID 8339 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1289.551 ; gain = 86.887 ; free physical = 4990 ; free virtual = 11938
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1289.562 ; gain = 86.887 ; free physical = 1895 ; free virtual = 11457
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:19]
-INFO: [Synth 8-3491] module 'bus_master' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:35' bound to instance 'bus_master0' of component 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:83]
-INFO: [Synth 8-638] synthesizing module 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:48]
-INFO: [Synth 8-3491] module 'uart_module' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:28' bound to instance 'uart_module0' of component 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:474]
+INFO: [Synth 8-638] synthesizing module 'top' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:20]
+INFO: [Synth 8-3491] module 'bus_master' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:35' bound to instance 'bus_master0' of component 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'bus_master' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:49]
+WARNING: [Synth 8-614] signal 'rx_done_signal_last' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'rx_done_signal' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'next_read_state' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'last_read_state' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'address_signal' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'data_signal' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'data_bus_out_signal' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'rx_data_out_signal' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'tx_busy' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'rxDataIsWrite' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'rxDataIsRead' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'rxDataIsNumb' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+WARNING: [Synth 8-614] signal 'rxDataNumb' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:244]
+INFO: [Synth 8-226] default block is never used [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:516]
+WARNING: [Synth 8-614] signal 'data_bus_in' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:473]
+WARNING: [Synth 8-614] signal 'read_state' is read in the process but is not in the sensitivity list [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:541]
+INFO: [Synth 8-3491] module 'uart_module' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:28' bound to instance 'uart_module0' of component 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:631]
 INFO: [Synth 8-638] synthesizing module 'uart_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:42]
 INFO: [Synth 8-3491] module 'uart_tx' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:37' bound to instance 'uart_tx0' of component 'uart_tx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:69]
 INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:48]
@@ -43,7 +60,7 @@ INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/jacoboffersen/advanced_
 INFO: [Synth 8-226] default block is never used [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:105]
 INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_rx.vhd:37]
 INFO: [Synth 8-256] done synthesizing module 'uart_module' (3#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_module.vhd:42]
-INFO: [Synth 8-3491] module 'clock_generator' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:35' bound to instance 'clock_generator0' of component 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:488]
+INFO: [Synth 8-3491] module 'clock_generator' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:35' bound to instance 'clock_generator0' of component 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:645]
 INFO: [Synth 8-638] synthesizing module 'clock_generator' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:40]
 WARNING: [Synth 8-5640] Port 'xtal_o' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:49]
 	Parameter M bound to: 62.375000 - type: float 
@@ -93,13 +110,55 @@ INFO: [Synth 8-638] synthesizing module 'binary_counter' [/home/jacoboffersen/ad
 	Parameter N bound to: 5 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'binary_counter' (5#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/binary_counter.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'clock_generator' (6#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_generator.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'bus_master' (7#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'bus_master' (7#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:49]
+WARNING: [Synth 8-5640] Port 'data_out' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:35]
+WARNING: [Synth 8-5640] Port 'hw_in' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:35]
 	Parameter module_adr bound to: 8'b10101011 
-INFO: [Synth 8-3491] module 'segment_display' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:35' bound to instance 'segment_display0' of component 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:96]
-INFO: [Synth 8-638] synthesizing module 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:44]
+INFO: [Synth 8-3491] module 'segment_display' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:35' bound to instance 'segment_display0' of component 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'segment_display' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:47]
 	Parameter module_adr bound to: 8'b10101011 
-INFO: [Synth 8-256] done synthesizing module 'segment_display' (8#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'segment_display' (8#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/segment_display.vhd:47]
+WARNING: [Synth 8-5640] Port 'data_in' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:44]
+WARNING: [Synth 8-5640] Port 'hw_out' is missing in component declaration [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:44]
+	Parameter module_adr bound to: 8'b10011000 
+INFO: [Synth 8-3491] module 'input_module' declared at '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/input_module.vhd:34' bound to instance 'input_module0' of component 'input_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'input_module' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/input_module.vhd:46]
+	Parameter module_adr bound to: 8'b10011000 
+INFO: [Synth 8-256] done synthesizing module 'input_module' (9#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/input_module.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'top' (10#1) [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/top.vhd:20]
+WARNING: [Synth 8-3331] design input_module has unconnected port reset_in
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[31]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[30]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[29]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[28]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[27]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[26]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[25]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[24]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[23]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[22]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[21]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[20]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[19]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[18]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[17]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[16]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[15]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[14]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[13]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[12]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[11]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[10]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[9]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[8]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[7]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[6]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[5]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[4]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[3]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[2]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[1]
+WARNING: [Synth 8-3331] design input_module has unconnected port data_in[0]
 WARNING: [Synth 8-3331] design segment_display has unconnected port reset_in
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[31]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[30]
@@ -125,32 +184,40 @@ WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[11]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[10]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[9]
 WARNING: [Synth 8-3331] design segment_display has unconnected port data_in[8]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[31]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[30]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[29]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[28]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[27]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[26]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[25]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[24]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[23]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[22]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[21]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[20]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[19]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[18]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[17]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[16]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[15]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[14]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[13]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[12]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[11]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[10]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[9]
-WARNING: [Synth 8-3331] design bus_master has unconnected port data_bus_in[8]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[31]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[30]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[29]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[28]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[27]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[26]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[25]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[24]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[23]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[22]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[21]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[20]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[19]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[18]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[17]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[16]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[15]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[14]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[13]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[12]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[11]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[10]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[9]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[8]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[7]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[6]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[5]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[4]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[3]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[2]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[1]
+WARNING: [Synth 8-3331] design segment_display has unconnected port hw_in[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.176 ; gain = 131.512 ; free physical = 5000 ; free virtual = 11948
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 1904 ; free virtual = 11465
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -163,10 +230,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.176 ; gain = 131.512 ; free physical = 4998 ; free virtual = 11947
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 1904 ; free virtual = 11466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.176 ; gain = 131.512 ; free physical = 4998 ; free virtual = 11947
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1334.188 ; gain = 131.512 ; free physical = 1904 ; free virtual = 11466
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -189,30 +256,33 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1659.215 ; gain = 0.000 ; free physical = 4776 ; free virtual = 11728
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1666.227 ; gain = 0.000 ; free physical = 1691 ; free virtual = 11252
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4842 ; free virtual = 11804
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1767 ; free virtual = 11329
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4842 ; free virtual = 11804
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1767 ; free virtual = 11329
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4844 ; free virtual = 11806
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1769 ; free virtual = 11331
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
 INFO: [Synth 8-5544] ROM "running" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'read_state_reg' in module 'bus_master'
 INFO: [Synth 8-5546] ROM "rxDataIsWrite" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rxDataIsRead" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rxDataIsNumb" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "rxDataNumb" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5544] ROM "tx_start_signal" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "data_out_signal" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "data_out_signal" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -224,8 +294,28 @@ INFO: [Synth 8-5546] ROM "data_out_signal" won't be mapped to RAM because it is 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
 WARNING: [Synth 8-327] inferring latch for variable 'tx_data_snapshot_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/uart_tx.vhd:112]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_wait |                             0000 |                             0000
+                   s_tx1 |                             0001 |                             0001
+                   s_tx2 |                             0010 |                             0010
+                   s_tx3 |                             0011 |                             0011
+                   s_tx4 |                             0100 |                             0100
+                   s_tx5 |                             0101 |                             0101
+                   s_tx6 |                             0110 |                             0110
+                   s_tx7 |                             0111 |                             0111
+                   s_tx8 |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'read_state_reg' using encoding 'sequential' in module 'bus_master'
+WARNING: [Synth 8-327] inferring latch for variable 'data_bus_out_signal_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:241]
+WARNING: [Synth 8-327] inferring latch for variable 'address_bus_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:314]
+WARNING: [Synth 8-327] inferring latch for variable 'startRead_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:255]
+WARNING: [Synth 8-327] inferring latch for variable 'data_signal_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:250]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:213]
+WARNING: [Synth 8-327] inferring latch for variable 'address_signal_reg' [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:249]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4824 ; free virtual = 11798
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1761 ; free virtual = 11323
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -242,29 +332,33 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                8 Bit    Registers := 6     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
 	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 5     
 +---Muxes : 
 	  21 Input     32 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
 	   4 Input      8 Bit        Muxes := 2     
 	  21 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 28    
+	   9 Input      4 Bit        Muxes := 5     
 	  23 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 8     
 	   4 Input      2 Bit        Muxes := 3     
 	  21 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 2     
-	  23 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
 	  21 Input      1 Bit        Muxes := 3     
+	  23 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -316,26 +410,35 @@ Detailed RTL Component Info :
 Module bus_master 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                8 Bit    Registers := 3     
-	                5 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	  21 Input     32 Bit        Muxes := 2     
-	   4 Input      8 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
 	  21 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 28    
+	   9 Input      4 Bit        Muxes := 5     
 	  23 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
 	  21 Input      2 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 3     
+	  23 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 2     
-	  23 Input      1 Bit        Muxes := 1     
-	  21 Input      1 Bit        Muxes := 3     
 Module segment_display 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module input_module 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -355,28 +458,34 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 WARNING: [Synth 8-6014] Unused sequential element bus_master0/clock_generator0/clock_module_TE02770/STABLE_O_reg was removed.  [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/imports/new/clock_module_TE0277.vhd:176]
-WARNING: [Synth 8-3936] Found unconnected internal register 'bus_master0/data_bus_out_signal_reg' and it is trimmed from '32' to '8' bits. [/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.srcs/sources_1/new/bus_master.vhd:234]
 INFO: [Synth 8-5546] ROM "bus_master0/uart_module0/uart_rx0/next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bus_master0/rxDataIsNumb" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "bus_master0/rxDataNumb" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[7]' (FDE) to 'bus_master0/tx_data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[6]' (FDE) to 'bus_master0/tx_data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[5]' (FDE) to 'bus_master0/tx_data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[4]' (FDE) to 'bus_master0/tx_data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[3]' (FDE) to 'bus_master0/tx_data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[2]' (FDE) to 'bus_master0/tx_data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/tx_data_reg[1]' (FDE) to 'bus_master0/tx_data_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bus_master0/tx_data_reg[0] )
-INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[7]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[6]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[5]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[4]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[3]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[2]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]'
-INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[1]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (bus_master0/tx_data_reg[0]) is unused and will be removed from module top.
+INFO: [Synth 8-5546] ROM "bus_master0/rxDataIsNumb" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "input_module0/data_out_signal" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[16]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bus_master0/data_bus_out_signal_reg[8]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[31]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[30]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[29]) is unused and will be removed from module top.
@@ -401,8 +510,13 @@ WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[11]) is 
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[10]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[9]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (bus_master0/data_signal_reg[8]) is unused and will be removed from module top.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[7] )
+INFO: [Synth 8-3886] merging instance 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[5]' (LD) to 'bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[4]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\segment_display0/hw_out_reg[4] )
+WARNING: [Synth 8-3332] Sequential element (bus_master0/uart_module0/uart_tx0/tx_data_snapshot_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (segment_display0/hw_out_reg[4]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4811 ; free virtual = 11785
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1745 ; free virtual = 11310
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -414,13 +528,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4708 ; free virtual = 11659
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1624 ; free virtual = 11188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11655
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1619 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -432,7 +546,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -456,7 +570,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -469,7 +583,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -481,25 +595,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -516,53 +630,56 @@ Report Cell Usage:
 |      |Cell        |Count |
 +------+------------+------+
 |1     |BUFG        |     2|
-|2     |LUT1        |     4|
-|3     |LUT2        |    13|
-|4     |LUT3        |    15|
-|5     |LUT4        |    13|
-|6     |LUT5        |    28|
-|7     |LUT6        |    39|
+|2     |LUT1        |     5|
+|3     |LUT2        |    23|
+|4     |LUT3        |    22|
+|5     |LUT4        |    18|
+|6     |LUT5        |    32|
+|7     |LUT6        |    55|
 |8     |MMCME2_BASE |     1|
-|9     |FDRE        |    99|
-|10    |IBUF        |     2|
-|11    |OBUF        |    18|
+|9     |FDRE        |    77|
+|10    |LD          |    44|
+|11    |IBUF        |    10|
+|12    |OBUF        |    18|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+---------------------------+--------------------+------+
 |      |Instance                   |Module              |Cells |
 +------+---------------------------+--------------------+------+
-|1     |top                        |                    |   234|
-|2     |  bus_master0              |bus_master          |   201|
+|1     |top                        |                    |   307|
+|2     |  bus_master0              |bus_master          |   255|
 |3     |    clock_generator0       |clock_generator     |    11|
 |4     |      binary_counter0      |binary_counter      |    10|
 |5     |      clock_module_TE02770 |clock_module_TE0277 |     1|
-|6     |    uart_module0           |uart_module         |   131|
-|7     |      uart_rx0             |uart_rx             |   103|
-|8     |      uart_tx0             |uart_tx             |    28|
-|9     |  segment_display0         |segment_display     |    10|
+|6     |    uart_module0           |uart_module         |   173|
+|7     |      uart_rx0             |uart_rx             |   124|
+|8     |      uart_tx0             |uart_tx             |    49|
+|9     |  input_module0            |input_module        |    15|
+|10    |  segment_display0         |segment_display     |     7|
 +------+---------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4703 ; free virtual = 11654
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1618 ; free virtual = 11183
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1659.215 ; gain = 131.512 ; free physical = 4757 ; free virtual = 11708
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1659.215 ; gain = 456.551 ; free physical = 4757 ; free virtual = 11708
+Synthesis finished with 0 errors, 0 critical warnings and 58 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1666.227 ; gain = 131.512 ; free physical = 1672 ; free virtual = 11236
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1666.227 ; gain = 463.551 ; free physical = 1672 ; free virtual = 11236
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
+  A total of 45 instances were transformed.
+  LD => LDCE: 44 instances
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 90 Warnings, 1 Critical Warnings and 0 Errors encountered.
+68 Infos, 180 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1667.223 ; gain = 477.125 ; free physical = 4756 ; free virtual = 11707
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1666.227 ; gain = 476.117 ; free physical = 1668 ; free virtual = 11233
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/jacoboffersen/advanced_programmable_electronics/sem3_advanced_fpga/advanced_fpga.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1691.234 ; gain = 0.000 ; free physical = 4758 ; free virtual = 11708
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 14:49:41 2020...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1690.238 ; gain = 0.000 ; free physical = 1668 ; free virtual = 11232
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 23 19:46:02 2020...
